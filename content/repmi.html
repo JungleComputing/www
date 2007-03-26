@@ -1,0 +1,7 @@
+<h2>RepMI</h2>
+
+<p>The Replicated Method Invocation (RepMI) system offers object replication in Java, aimed at improving the performance of parallel programs. Our programming model allows the programmer to define groups of objects that can be replicated and updated as a whole, using totally-ordered broadcast to send update methods to all machines containing a copy.</p>
+
+<p>Our model does not allow arbitrarily complex object graphs to be replicated, but deliberately imposes restrictions to obtain a clear programming model and high performance.  Briefly, our model allows the programmer to define closed groups of objects, called clouds, that are replicated as a whole. A cloud has a single entry point, called the root object, on which its methods are invoked. The compiler and runtime system together determine which methods will only read (but not modify) the object cloud; such read-only methods are executed locally, without any communication. Methods that modify any data in the cloud are broadcast and applied to all replicas. A single broadcast message is used to update the entire cloud, independent of the number of objects it contains. The semantics of such replicated method invocations are similar to those of RMI.</p> 
+
+<p>We have implemented this scheme in the Manta high-performance Java system. An implementation on top of Ibis is being contemplated.</p>

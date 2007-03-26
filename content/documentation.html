@@ -1,0 +1,39 @@
+<h2>Documentation</h2>
+
+<p>Ibis is designed as a multi layer system. See the picture of the Ibis design below. On top of the system are the <a href="applications.html">applications</a>. These applications can use any of the programming models present in Ibis. Available models include standard <a href="rmi.html">Java RMI</a>, a divide and conquer model called <a href="satin.html">Satin</a>, and <a href="gmi.html">GMI</a>, a version of RMI enhanced with group communication. The next layer is the <a href="ipl.html">Ibis Portability Layer</a>, or IPL. The IPL acts as a common interface for the different programming models to the bottom implementation layer. Multiple implementations are available. <a href="tcp.html">Some</a> using 100% Java code to ensure portability, and <a href="panda.html">some</a> taking advantage of local high speed networks such as Myrinet using native code.</p>
+
+
+<p>
+<img src="images/ibis-design.png" height="404" width="600" usemap="#designmap" alt="ibis design" >
+<map name="designmap">
+	<area href="applications.html" shape="rect" coords="0,0,600,63" alt="applications">
+
+	<area href="rmi.html" shape="rect" coords="0,72,90,135" alt="rmi">
+	<area href="gmi.html" shape="rect" coords="102,72,192,135" alt="gmi">
+	<area href="satin.html" shape="rect" coords="204,72,295,135" alt="satin">
+	<area href="mpj.html" shape="rect" coords="304,72,396,135" alt="mpj">
+	<area href="repmi.html" shape="rect" coords="407,72,498,135" alt="repmi">
+
+	<area href="ipl.html" shape="rect" coords="508,72,600,145" alt="ipl">
+	<area href="ipl.html" shape="rect" coords="0,145,600,206" alt="ipl">
+
+	<area href="tcp.html" shape="rect" coords="0,218,91,280" alt="tcp">
+	<area href="udp.html" shape="rect" coords="102,218,192,280" alt="udp">
+	<area href="p2p.html" shape="rect" coords="203,218,295,280" alt="p2p">
+	<area href="gm.html" shape="rect" coords="304,218,397,280" alt="gm">
+	<area href="panda.html" shape="rect" coords="406,218,497,280" alt="panda">
+	<area href="mpi.html" shape="rect" coords="508,218,600,280" alt="mpi">
+</map>
+</p>
+
+<p>
+Click on any part of the picture for more information about a component of Ibis
+</p>
+
+<p>For more in depth information see the following resources:</p>
+
+<ul>
+<li><a href = "http://www.cs.vu.nl/ibis/progman/index.html">Programmers Manual</a> <a href = "http://www.cs.vu.nl/ibis/progman.pdf">(.pdf)</a></li>
+<li><a href = "http://www.cs.vu.nl/ibis/api/index.html">Ibis API (Java doc)</a>
+</ul>
+

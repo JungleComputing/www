@@ -1,0 +1,4 @@
+AddType application/x-httpd-php .html
+AddDefaultCharset utf-8
+AddType image/svg+xml svg
+AddType image/svg+xml svgz 

@@ -1,0 +1,94 @@
+  <h2>Ibis users</h2>
+
+  <p>Below we list some users of Ibis. We are always interested in users expericence with
+  Ibis and are more than happy to add any projects which uses Ibis to this page. </p>
+
+  <h3>Parallel simulation of soil-structure-interaction</h3>
+
+  <p><a href="http://www.iib.bauing.tu-darmstadt.de/"><img src="http://www.iib.bauing.tu-darmstadt.de/images/iib_logo.jpg" class="userlogo" width="150" alt= "iib logo" ></a>
+  
+  <a href="http://www.iib.bauing.tu-darmstadt.de/mitarbeiter/mueller.html">Michael Mueller</a> of the
+  <a href="http://www.iib.bauing.tu-darmstadt.de/">Institute of Numerical Methods and Informatics
+  in Civil Engineering</a> is implementing an Intra-Grid-System for the parallel simulation of
+  soil-structure-interaction for geotechnical problems.</p>
+
+  <p>The constitutive equations are described by the theory of porous media, where the interaction
+  between the involved phases is considered. The averaging of the phases over a representive
+  elementary volume is carried out using the concept of volumetric content. The complexity and size
+  of three-dimensional engineering-problems in the field of fluid-soil-interaction makes the
+  simulation numerically very costly, especially when the results are to be improved by
+  fully-adaptive methods. In our project we apply the fully-adaptive p-refinement of the FEM.</p>
+
+  <p>The parallelization is based on mobile Java-Agents, taking advantage of the agent features
+  such as portability, mobility, reactivity etc. In the time critical parts of the parallel
+  simulation, mainly the solving of the linear equation system, we use Ibis for a more efficient
+  communication, solving the problem of the very slow agent-based messaging. Ibis offers all
+  features needed for an efficient and trouble-free implementation, such as one-2-many
+  communication and the possiblity to send arbitrary objects.</p>
+
+  <p>The numerical part of the simulation works reasonably well and at present we are mainly
+  dealing with aspects of load balancing and job-scheduling.</p>
+
+  <h3>ProActive</h3>
+
+  <p><a href="http://www-sop.inria.fr/oasis/proactive"><img src="http://www-sop.inria.fr/oasis/proactive/images/pro-active2.gif" width="150" class="userlogo" alt="ProActive logo"></a>ProActive is a GRID Java library for
+  parallel, distributed, and concurrent computing, also featuring mobility and security in a
+  uniform framework. With a reduced set of simple primitives, ProActive provides a comprehensive
+  API allowing to simplify the programming of applications that are distributed on Local Area
+  Network (LAN), on cluster of workstations, or on Internet Grids. See the <a href=
+  "http://www-sop.inria.fr/oasis/proactive/">ProActive website</a> for more information.</p>
+
+  <p>ProActive has been ported to Ibis by <a href=
+  "http://www-sop.inria.fr/oasis/personnel/Fabrice.Huet/">Fabrice Huet</a>. <a href=
+  "http://www-sop.inria.fr/oasis/personnel/Laurent.Baduel/">Laurent Baduel</a> used this version
+  for a Java version of EM3D: a parallel solver for electromagnetic waves propagation. Performance
+  results are presented in Section 6.4.3 of <a href=
+  "http://www-sop.inria.fr/oasis/personnel/Laurent.Baduel/TypedGroupsForTheGrid.pdf">his
+  thesis</a>.</p>
+
+  <h3>MEG scanner data processing</h3>
+
+  <p><a name="VuMC" id="VuMC"></a> The Vrije Universiteit Medical Centre (VUmc)
+  posesses a MEG scanner which produces lots of data which must be
+  processed.
+  Magnetoencephalography (MEG) is a tool to study the function of the human
+  brain. MEG measures the magnetic field intensity at hundreds of points over
+  the surface of the skull up to several thousand times per second.
+  Measurements made while a subject is recognizing a picture, performing
+  mathematical calculations, watching an alternating check board pattern,
+  sitting quietly with their eyes closed, or a host of other tasks,
+  provide insight into the functioning of the brain, whether
+  healthy or diseased. 
+  </p>
+
+  <p>The size of a data set from one session with one subject is often hundreds
+  of megabytes.
+  When this is multiplied by dozens of subjects in a study, and perhaps
+  multiple sessions per subject, the computational demands become arduous and
+  clustered computer resources are often necessary.
+  As our processing code is written in Java, the Ibis ability to move hundreds
+  of megabytes to many different nodes very quickly, simply and efficiently is
+  a great advantage.
+  Once a copy of a data set is on the local hard disk of a node,
+  processing of the data becomes much quicker and easier.</p>
+
+  <h3>Jylab</h3>
+  <p><a href="http://scgroup2.ceid.upatras.gr:8000/JylabHomepage"><img src="http://scgroup2.ceid.upatras.gr:8000/wiki/common/jylab.jpg" width="150" class="userlogo" alt="Jylab logo"></a>
+  Jylab is a portable and flexible scientific computing environment. At minimum,
+  it provides a user with a scripting language and a core set of libraries implementing
+  numerical linear algebra routines (NLA) and communication models.
+  The communication models are provided by Ibis.
+  Jylab thus enables the development of scientific applications over distributed
+  computing platforms.</p>
+
+  <p>Jylab owes its portability to <a href="http://www.jython.org">Jython</a>.
+  Jython is an implementation of the
+  Python programming language written in Java. So Jylab runs at all platforms providing
+  a recent JVM. Also it is flexible enough, since one normally programs in Python,
+  which is a very high-level, object-oriented, dynamically-typed language.</p>
+
+  <h3>A Grid-wide file system</h3>
+
+  <p>Sasha Ruppert from the Universität Erlangen-Nürnberg in Erlangen,
+  Germany built a Grid-wide file system using Ibis as the communication
+  layer. Click <a href="http://www2.cs.fau.de/Lehre/SA-DA/GridFileSystem.xml">here</a> for more information.</p>

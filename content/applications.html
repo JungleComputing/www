@@ -1,0 +1,42 @@
+<h2>Applications</h2>
+
+Below we list applications developed for Ibis at the Vrije Universiteit. See the <a href="users.html">users section</a> for applications developed by others.
+
+<h3>SAT4SATIN</h3>
+
+<p>The satisfiability problem (SAT), i.e., the problem deciding whether
+a given boolean formula is satisfiable, is an important NP-complete problem.
+The solution of a SAT problem is either a boolean variable assignment
+that makes the given formula true, or the result "unsatisfiable" meaning
+that no such assignment exists. Solving a SAT problem requires a systematic
+search over a potentially huge solution space. Various techniques have been
+developed to make this search more efficient for practical problems, but it is
+inherently difficult. Satisfiability solvers are commonly used in industry
+to verify the correctness of complex digital circuits, such as out-of-order
+execution units in modern processors.</p>
+
+<p>We constructed an efficient SAT solver "SAT4SATIN" based on the existing
+sequential solver <a href="http://www.sat4j.org">SAT4J</a>, which in turn is a
+reimplementation in Java of <a href="http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/">MiniSAT</a>.
+Both MiniSAT and SAT4J are "industry strength" solvers, that are competitive
+with other state-of-the-art implementations. These solvers use a backtracking
+search that speculatively assigns boolean values to variables until the problem
+is satisfied or a conflict is encountered. Upon a conflict the solver
+backtracks.</p>
+
+<p>Parallelizing SAT4J with Satin was relatively easy. For each speculative
+assignment a task is spawned so that alternative assignments are evaluated
+in parallel.
+A challenging issue in parallelizing SAT solvers arises from the
+fact that it is hard to predict how much execution time is needed to
+solve a spawned subproblem. For some subproblems, the costs of
+spawning may even exceed the execution time. Therefore, in our
+implementation we use the same approach taken in the 
+<a href="http://vgrads.rice.edu/research/applications/gridsat">GridSAT</a> solver: each task
+first performs a certain amount of sequential search before splitting
+up the remaining search problem. This guarantees that only hard
+tasks will be split.</p>
+
+<p>Other aspects that are implemented conveniently and efficiently
+using a recent shared objects extension include global learning and
+global search bound checking.</p>

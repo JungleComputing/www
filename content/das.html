@@ -1,0 +1,179 @@
+<h2>Using Ibis on the DAS-2 system</h2>
+
+<p>
+On the <A href="http://www.cs.vu.nl/das2">DAS-2</A> system,
+the latest Ibis release is installed
+in <EM>/usr/local/package/ibis</EM>. In addition, an <EM>ibis-prun</EM> script
+is available for starting Ibis applications with
+<A HREF="http://www.cs.vu.nl/das/prun/prun.1.html">prun</A>.
+</p>
+<p>
+A convenient way to use the DAS-2 system is via the
+<A HREF="http://www.cs.vu.nl/das/prun/prun.1.html">prun</A> user interface.
+The <EM>prun</EM> command acts as a synchronous, shell-like interface.
+See the <A href="http://www.cs.vu.nl/das2/das2-run.html">DAS-2</A> page
+for more details on <EM>prun</EM> and running programs on the DAS-2 in
+general.
+</P>
+<h3>Using the <EM>ibis-prun</EM> script</h3>
+<p>
+Unlike the Ibis distribution, the Ibis installation on the DAS-2 contains
+a script <EM>ibis-prun</EM>, which is specifically built for running Ibis
+on the DAS-2. It is similar to <EM>ibis-run</EM>, but does some things
+automatically that <EM>ibis-run</EM> does not. Before discussing the details,
+here is a little example:
+</p>
+
+<pre>
+$ prun -1 -v /usr/local/package/ibis/bin/ibis-prun 2 Latency
+Reservation number 174220: Reserved 2 hosts for 900 seconds
+Run on 2 hosts for 960 seconds from Thu Dec  8 13:29:11 2005
+: node048/0 node057/0
+Latency: 10000 calls took 1.672 seconds, time/call = 167.2 micros
+Latency: 10000 calls took 1.414 seconds, time/call = 141.4 micros
+Latency: 10000 calls took 1.381 seconds, time/call = 138.1 micros
+Latency: 10000 calls took 1.42 seconds, time/call = 142.0 micros
+Latency: 10000 calls took 1.424 seconds, time/call = 142.4 micros
+Latency: 10000 calls took 1.486 seconds, time/call = 148.6 micros
+Latency: 10000 calls took 1.409 seconds, time/call = 140.9 micros
+Latency: 10000 calls took 1.457 seconds, time/call = 145.7 micros
+Latency: 10000 calls took 1.441 seconds, time/call = 144.1 micros
+Latency: 10000 calls took 1.419 seconds, time/call = 141.9 micros
+$
+</pre>
+
+<p>
+This runs the Ibis application <EM>Latency</EM> on 2 nodes.
+The <em>-1</em> option to prun makes sure that two nodes are allocated,
+not two cpus on the same node. The <em>-v</em> option makes it a bit
+more verbose about which nodes are allocated.
+</p>
+<p>
+<em>Ibis-prun</em> lies on top of <em>ibis-run</em>, and supplies
+<em>ibis-run</em> with the following:
+</p>
+<UL>
+<LI>a list of host names (the <em>-hosts</em> option to <em>ibis-run</em>);
+<LI>the number of hosts (the <em>-nhosts</em> option to <em>ibis-run</em>);
+<LI>a unique run key (the <em>-key</em> option to <em>ibis-run</em>).
+</UL>
+<p>
+Implicitly, this also supplies a default nameserver (the first host in the
+list of hosts). The general form is:
+</p>
+
+<pre>
+prun &lt;prun params&gt; ibis-prun &lt;ibis-prun params&gt; &lt;jvm params&gt; &lt;classname&gt; &lt;application params&gt;
+</pre>
+The first parameter that is not recognized as an option to ibis-prun
+terminates the ibis-prun parameters.
+The ibis-prun parameters are:
+<table summary="" cellspacing="1">
+<tr>
+<td>
+<code>-attach</code>
+</td>
+<td>
+set jvm parameters so that jdb can attach to the running process
+</td>
+</tr>
+<tr>
+<td>
+<code>-cd &lt;dir&gt;</code>
+</td>
+<td>
+when using the javawrapper, make it change to directory &lt;dir&gt;
+before starting java
+</td>
+</tr>
+<tr>
+<td>
+<code>-jdb</code>
+</td>
+<td>
+execute jdb instead of java
+</td>
+</tr>
+<tr>
+<td>
+<code>-key &lt;key&gt;</code>
+</td>
+<td>
+use &lt;key&gt; for identification with the nameserver, instead of the
+prun-supplied one
+</td>
+</tr>
+<tr>
+<td>
+<code>-no-jit</code>
+</td>
+<td>
+disable just-in-time compiling
+</td>
+</tr>
+<tr>
+<td>
+<code>-no-pool</code>
+</td>
+<td>
+don't pass on any node-pool information to the application
+</td>
+</tr>
+<tr>
+<td>
+<code>-n</code>
+</td>
+<td>
+only print the run command, don't actually execute it
+</td>
+</tr>
+<tr>
+<td STYLE="white-space: nowrap;">
+<code>-ns &lt;nameserver&gt;</code>
+</td>
+<td>
+specifies the hostname on which the nameserver runs
+</td>
+</tr>
+<tr>
+<td>
+<code>-ns-port</code>
+</td>
+<td>
+specifies the port number on which the nameserver is listening
+</td>
+</tr>
+<tr>
+<td>
+<code>-pg &lt;prefix&gt;</code>
+</td>
+<td>
+pass profiling flags on to java, use &lt;prefix&gt; for the result file
+</td>
+</tr>
+<tr>
+<td>
+<code>-p &lt;prefix&gt;</code>
+</td>
+<td>
+pass different profiling flags on to java, use &lt;prefix&gt; for the result file
+</td>
+</tr>
+<tr>
+<td>
+<code>-sleep &lt;n&gt;</code>
+</td>
+<td>
+sleep &lt;n&gt; seconds before starting the run
+</td>
+</tr>
+<tr>
+<td>
+<code>--</code>
+</td>
+<td>
+terminates the parameters for ibis-prun; following parameters are passed
+on to java, even if they would be acceptable to ibis-prun
+</td>
+</tr>
+</table>

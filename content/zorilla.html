@@ -1,7 +1,63 @@
+<table class=topmenu><tr>
+<td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/projects/zorilla/">Download Zorilla</a></td>
+<td class=topmenu><a class=topmenu href="publications.html#zorilla">Zorilla Publications</a></td>
+<td class=topmenu><a class=topmenu href="talks.html#zorilla">Zorilla Talks</a></td>
+<td class=topmenu><a class=topmenu href="mailto:ndrost@cs.vu.nl">Contact</a></td>
+</tr>
+</table>
+
 <h2>Zorilla</h2>
 
-<p>Zorilla is peer-to-peer grid middleware. It implements all functionality needed to run applications on a grid in a fully distributed manner, such as scheduling, file transfer and security. Deployment of Zorilla is easy; only a single application needs to be installed on the participating machines. Zorilla requires little configuration, since machines automatically organize themselves into a grid. Due to its peer-to-peer design, Zorilla scales to large numbers of machines.  Jobs can be submitted to Zorilla directly or using the JavaGAT. Although Zorilla was explicitly designed to support supercomputing applications, it is possible to run any type of application.</p>
+<a name=overview><h3>What is Zorilla?</h3></a>
 
-<p>For more information see <a href="http://www.cs.vu.nl/ibis/papers/drost_gp2p_2006.pdf">this</a> paper (also in the <a href="publications.html">publications</a> section).
+<p>Zorilla is <strong>prototype</strong> Peer-to-Peer(P2P) grid middleware system. It strives to implement all functionality needed to run applications on a grid in a fully distributed manner, such as scheduling, file transfer and security. </p>
 
-Please visit the Zorilla <a href="http://gforge.cs.vu.nl/projects/zorilla">CSForge project page</a> for downloads and other info</p>
+<p>Zorilla is designed to be used in situations where a full-blown grid environment is not needed, or simply not possible.  Deployment of Zorilla is easy; only a single application needs to be installed on the participating machines. Zorilla requires little configuration, since machines automatically organize themselves into a grid. Due to its Peer-to-Peer design, Zorilla scales to large numbers of machines. </p>
+
+<h3>How does Zorilla work?</h3>
+
+Zorilla is build-up around a Peer-to-Peer overlay network. This network consists of a (possibly large) number of Zorilla nodes. These nodes work together to handle any work, or jobs, put in by one or more users. A job can be submitted at any node in the system. This node will then look for the resources required by the job, by sending a request to other Zorilla nodes in the P2P network.</p>
+
+<p>See the picture below for an overview of the different actions needed to run jobs:</p>
+
+<p>
+<img src="images/zorilla-lifecycle.png" alt="the Zorilla life-cycle">
+</p>
+
+</p><dl> <dt>Bootstrap</dt> 
+
+<dd>Before a node can join the P2P network, some initial contact point within
+this network is needed. Zorilla will search for nodes using UDP broadcast,
+which is able to find nodes in the same local network. Alternatively, a user
+can also supply one or more nodes to contact.</dd>
+
+<dt>Gossiping</dt> 
+
+<dd>After bootstrapping, a Zorilla nodes starts exchanging information, or
+Gossiping, with other nodes (or peers). The gossiping is used to exchange
+information about peers, such as location, contact address, etc.  Because of
+the nature of the "ARRG" algorithm used, each Zorilla node will have a list
+consisting of a constantly changing random set of peers. For more information, see the HPDC 2007 paper in the <a href="zorilla_publications.html">publications</a> section.</dd>
+
+
+<dt>Clustering</dt>
+<dd>Using the random stream of peers, a node then build up a list of neighbours: peers which are close-by to itself. This allows a node to do a "local" search of the network, by contacting its neighbours.</dd>
+
+<dt>Scheduler</dt>
+<dd>When a user submits a job to his or her local Zorilla node, this node starts looking for resources. This is done by contacting other nodes in the network, an requesting them to "help out" with this job. Nodes are contacting using a bounded flooding mechanism. First, resources are searched for at the neighbours found using the clustering mechanism. Then, resources are search at the neighbours of these neighbours, and so on. This allows a nodes to find resources "close-by". For more information, see the GP2P 2006 paper in the <a href="zorilla_publications.html">publications</a> section.</dd>
+
+
+<dt>Job</dt>
+<dd>Once the needed resources are available, Zorilla will create a distributed Job object and copy the executable and any input files given by the user to all the nodes participating in the job. The nodes will together keep track of the state of the job, such as if the job was terminated, if any output files need to be returned to the user, etc.</dd>
+
+<dt>Application</dt>
+<dd>Finally, the application is started on all participating nodes simultaneously. For security reasons, Zorilla is able to sandbox applications using the Java Virtual Machine (JVM). This does require the application to be written in Java though.</dd>
+
+</dl>
+
+<h3>How do I use Zorilla?</h3>
+
+<p>To start using Zorilla, first <a href="http://gforge.cs.vu.nl/projects/zorilla/">download</a> Zorilla. Zorilla must then be installed, and run, on any machine which needs to be in the Zorilla "grid". See the documentation in the distribution for further details.</p>
+
+<p>After installing Zorilla on one or more machines, jobs can be submitted to Zorilla using either the JavaGAT, or via several console applications. A single command (zubmit) should normally be enough to start running jobs on Zorilla.</p>
+

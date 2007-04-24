@@ -14,9 +14,16 @@ done
 
 cd ..
 
-
 #also generate publications and talks content...
 
-bibtex2html -nokeys -nodoc -dl -d -r -o generated_publications papers/publications.bib
-bibtex2html -nokeys -nodoc -nf ppt ".ppt" -dl -d -r -o generated_talks talks/talks.bib
+echo Creating publications and talks...
+for CATEGORY in satin mpj gmi zorilla ibis smartsockets other
+do
+	echo $CATEGORY
+
+bibtex2html -nokeys -nofooter -nodoc -dl -d -r -q -o generated_publications_$CATEGORY publications/$CATEGORY.bib
+
+bibtex2html -nokeys -nofooter -nodoc -nf ppt ".ppt" -dl -d -r -q -o generated_talks_$CATEGORY talks/$CATEGORY.bib
+
+done
 

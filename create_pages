@@ -17,7 +17,7 @@ cd ..
 #also generate publications and talks content...
 
 echo Creating publications and talks...
-for CATEGORY in satin mpj gmi zorilla ibis smartsockets other
+for CATEGORY in javagat satin mpj gmi zorilla ibis smartsockets other
 do
 	echo $CATEGORY
 

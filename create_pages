@@ -8,8 +8,8 @@ cd content
 
 for SUBPAGE in *.html
 do
-	echo $SUBPAGE
-	sed "s/CONTENT/$SUBPAGE/" ../page_template > ../$SUBPAGE
+    echo $SUBPAGE
+    sed "s/CONTENT/$SUBPAGE/" ../page_template > ../$SUBPAGE
 done
 
 cd ..
@@ -19,11 +19,14 @@ cd ..
 echo Creating publications and talks...
 for CATEGORY in javagat satin mpj gmi zorilla ibis smartsockets other
 do
-	echo $CATEGORY
+    echo $CATEGORY
+    if [ -f publications/$CATEGORY.bib ]
+    then
+	bibtex2html -nokeys -nofooter -nodoc -dl -d -r -q -o generated_publications_$CATEGORY publications/$CATEGORY.bib
+    fi
 
-bibtex2html -nokeys -nofooter -nodoc -dl -d -r -q -o generated_publications_$CATEGORY publications/$CATEGORY.bib
-
-bibtex2html -nokeys -nofooter -nodoc -nf ppt ".ppt" -dl -d -r -q -o generated_talks_$CATEGORY talks/$CATEGORY.bib
-
+    if [ -f talks/$CATEGORY.bib ]
+    then
+	bibtex2html -nokeys -nofooter -nodoc -nf ppt ".ppt" -dl -d -r -q -o generated_talks_$CATEGORY talks/$CATEGORY.bib
+    fi
 done
-

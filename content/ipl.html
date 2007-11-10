@@ -1,38 +1,58 @@
 <table class=topmenu><tr>
 <td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/projects/ibis/">Download Ibis</a></td>
 <td class=topmenu><a class=topmenu href = "javadoc/index.html">Javadoc</a></td>
-<td class=topmenu><a class=topmenu href="downloads/progman.pdf">Manual</a></td>
+<td class=topmenu><a class=topmenu href="downloads/progman.pdf">Programmer's Manual</a></td>
+<td class=topmenu><a class=topmenu href="downloads/usersguide.pdf">User's Guide</a></td>
 <td class=topmenu><a class=topmenu href="publications.html#ibis">Ibis Publications</a></td>
 <td class=topmenu><a class=topmenu href="talks.html#ibis">Ibis Talks</a></td>
+<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=16">Report Bugs</a></td>
 <td class=topmenu><script type="text/javascript"> generate_contact_address( "ibis-devel", "cs.vu.nl" ); </script></td>
 </tr>
 </table>
 
 <h2>The Ibis Communication Library</h2>
 
-<p>The Ibis communications library is specifically designed for usage in a grid environment. It has a number of properties which help to achieve its goal of providing programmers with an easy to use, reliable grid communication infrastructure</p>
+<p>The Ibis communications library is specifically designed for usage in
+a grid environment. It has a number of properties which help to achieve
+its goal of providing programmers with an easy to use, reliable grid
+communication infrastructure</p>
 
-<dl>
-<dt><strong>Run anywhere</strong></dt>
-<dd>Ibis, is programmed in Java. Because of this it is possible to use Ibis programs anywhere a Java Virtual machine is available.</dd>
+<dl> <dt><strong>Run anywhere</strong></dt> <dd>Ibis, is programmed in
+Java. Because of this it is possible to use Ibis programs anywhere a
+Java Virtual machine is available.</dd>
 
-<dt><strong>Efficient</strong></dt>
-<dd>In addition to the standard network types available in Java, Ibis is able to use fast local networks such as Myrinet where these are available. If multiple network types are present on a single system, Ibis will automatically select the best type available.
+<dt><strong>Efficient</strong></dt> <dd>In addition to the standard
+network types available in Java, Ibis is able to use fast local networks
+such as Myrinet where these are available. If multiple network types are
+present on a single system, Ibis will automatically select the best type
+available.
 
-<dt><strong>Flexible</strong></dt>
-<dd>By offering multiple communication models, not ony unicast communication, it is possible to express virtually any communication pattern easily and efficiently using Ibis.</dd>
+<dt><strong>Flexible</strong></dt> <dd>By offering multiple
+communication models, not ony unicast communication, it is possible to
+express virtually any communication pattern easily and efficiently using
+Ibis.</dd>
 
-<dt><strong>Malleable</strong></dt>
-<dd>Availability of resources in grid system changes constantly as network and hardware fail and new resources get added to a grid. Ibis offers support for keeping track of machines in a computation to address these problems.
-</dd>
+<dt><strong>Malleable</strong></dt> <dd>Availability of resources in
+grid system changes constantly as network and hardware fail and new
+resources get added to a grid. Ibis offers support for keeping track of
+machines in a computation to address these problems.  </dd>
 
-<dt><strong>Simple</strong></dt>
-<dd>The design of the IPL is deliberately kept simple. This makes adding support for new network types easy, and allowes for easy adaptation of Ibis as an communication framework.</dd>
-</dl>
+<dt><strong>Simple</strong></dt> <dd>The design of the IPL is
+deliberately kept simple. This makes adding support for new network
+types easy, and allowes for easy adaptation of Ibis as an communication
+framework.</dd> </dl>
 
 <h3>System Overview</h3>
 
-<p>Ibis was designed to be used in a multi layer system. See the picture of the design below. On top of the system are the applications. These applications can use any of the programming models build on top of Ibis. The Ibis Portability Layer (IPL)  acts as a common interface for the different programming models to the bottom implementation layer. Multiple implementations are available. Some, such as TcpIbis using 100% Java code to ensure portability, and some, such as the MPI based Ibis implementation taking advantage of local high speed networks using native code.</p>
+<p>Ibis was designed to be used in a multi layer system. See the picture
+of the design below. On top of the system are the applications. These
+applications can use any of the programming models build on top of Ibis.
+The Ibis Portability Layer (IPL)  acts as a common interface for the
+different programming models to the bottom implementation layer.
+Multiple implementations are available. Some, such as TcpIbis using 100%
+Java code to ensure portability, and some, such as the MPI based Ibis
+implementation taking advantage of local high speed networks using
+native code.</p>
 
 <p>
 <img src="images/ibis-design.png" height="436" width="600" alt="ibis design" >
@@ -40,9 +60,10 @@
 
 <p>For more in depth information see the following resources:</p>
 
-<ul>
-<li><a href = "http://www.cs.vu.nl/ibis/progman/index.html">Programmers Manual</a> <a href = "http://www.cs.vu.nl/ibis/progman.pdf">(.pdf)</a></li>
-<li><a href = "http://www.cs.vu.nl/ibis/api/index.html">Ibis API (Java doc)</a>
+<ul> <li><a href =
+"http://www.cs.vu.nl/ibis/progman/index.html">Programmers Manual</a> <a
+href = "http://www.cs.vu.nl/ibis/progman.pdf">(.pdf)</a></li> <li><a
+href = "http://www.cs.vu.nl/ibis/api/index.html">Ibis API (Java doc)</a>
 </ul>
 
 <h3>Implementations</h3>
@@ -51,17 +72,31 @@ The Ibis communication library includes a number of implementations.
 
 <h4>TCPIbis</h4>
 
-<p>TcpIbis is written in 100% pure Java, using the sockets available in the standard Java library. As such it is possible to use this Ibis implementation on any system which has a Java Virtual Machine Available. In addition to being very portable it also had good support for dealing with network difficulties such as firewalls and NATs.</p>
+<p>TcpIbis is written in 100% pure Java, using the sockets available in
+the standard Java library. As such it is possible to use this Ibis
+implementation on any system which has a Java Virtual Machine Available.
+In addition to being very portable it also had good support for dealing
+with network difficulties such as firewalls and NATs.</p>
 
 <h4>MPIbis</h4>
 
-<p>One of the most used ways of using a high speed network in clusters today is MPI. For this reason practically every high speed network in use today has the possibility to communicate using a implementation of MPI. For this reason we are currently in the process of builing an Ibis implementation which uses MPI as the underlying communication layer. Early results are very promising, but more work is needed to complete this implementation fully.</p>
+<p>One of the most used ways of using a high speed network in clusters
+today is MPI. For this reason practically every high speed network in
+use today has the possibility to communicate using a implementation of
+MPI. For this reason we are currently in the process of builing an Ibis
+implementation which uses MPI as the underlying communication layer.
+Early results are very promising, but more work is needed to complete
+this implementation fully.</p>
 
 <h4>P2PIbis</h4>
 
-<p>An implementation we are currently looking at is an Ibis which sends message over a peer-to-peer network. This would have the advantage that it would be very resilant agains network problems such as failing connections, and firewalls.</p>
+<p>An implementation we are currently looking at is an Ibis which sends
+message over a peer-to-peer network. This would have the advantage that
+it would be very resilant agains network problems such as failing
+connections, and firewalls.</p>
 
 <h4>UDPIbis</h4>
 
-<p>An interesting addition to the available Ibisses would be an Ibis implemented on top of UDP. This is currently in progress.</p>
+<p>An interesting addition to the available Ibisses would be an Ibis
+implemented on top of UDP. This is currently in progress.</p>
 

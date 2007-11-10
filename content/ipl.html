@@ -7,13 +7,12 @@
 </table>
 
 <table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href = "javadoc/index.html">Javadoc</a></td>
+<td class=topmenu><a class=topmenu href = "javadoc/ipl/index.html">Javadoc</a></td>
 <td class=topmenu><a class=topmenu href="downloads/usersguide.pdf">User's Guide</a></td>
 <td class=topmenu><a class=topmenu href="talks.html#ibis">Ibis Talks</a></td>
 <td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=16">Report Bugs</a></td>
 </tr>
 </table>
-
 
 
 <h2>The Ibis Communication Library</h2>
@@ -76,13 +75,19 @@ href = "http://www.cs.vu.nl/ibis/api/index.html">Ibis API (Java doc)</a>
 
 The Ibis communication library includes a number of implementations.
 
-<h4>TCPIbis</h4>
+<h4>TCP</h4>
 
-<p>TcpIbis is written in 100% pure Java, using the sockets available in
-the standard Java library. As such it is possible to use this Ibis
-implementation on any system which has a Java Virtual Machine Available.
-In addition to being very portable it also had good support for dealing
-with network difficulties such as firewalls and NATs.</p>
+<p>The TCP based implementation Tcp is written in 100% pure Java, using
+the sockets available in the standard Java library. As such it is
+possible to use this Ibis implementation on any system which has a Java
+Virtual Machine Available.</p>
+
+<h4>Smartsockets</h4>
+
+<p>Like the TCP version, the Ibis based on Smartsockets is written in
+100% pure Java.  However, since it uses the Smartsockets library of the
+Ibis project it also has very good support for dealing with network
+difficulties such as firewalls and NATs.</p>
 
 <h4>MPIbis</h4>
 

@@ -4,61 +4,57 @@
 <p>
 Grid computing promises the integration of high-performance computing
 facilities, large-scale data repositories, and high-end visualization
-devices,  geographically distributed around the globe,
-into large <em>virtual organizations.</em> 
-The name <em>computational grid</em> has been
-chosen in analogy to the electrical power grid that allows to tap
-electrical power by simply "plugging in," without even thinking about where
-the energy is actually produced.
-Likewise, grids promise access to computing cycles and data repositories,
-independent of the actual service providers.
+devices,  geographically distributed around the globe, into large
+<em>virtual organizations.</em> The name <em>computational grid</em>
+has been chosen in analogy to the electrical power grid where you
+can tap electrical power by simply "plugging in," without even
+thinking about where the energy is actually produced.  Likewise,
+grid computing promises access to computing cycles and data
+repositories independent of the actual service providers.
 </p>
 
 <p>
-The grid computing group at the VU performs research in the area of
-programming environments, adaptivity to network conditions, and remote
-data visualization for the grid. Our research is tightly integrated into
-many international and national efforts like:
+In our group we are have developed, and are still refining,
+a number of complementary support
+libraries (`middleware') to make grid computing accessible.
 <ul>
-<li> The <a href="http://www.gridforum.org">Open Grid Forum</a>
-<li> The EU-funded <a href="http://www.xtreemos.org">XtreemOS Project</a>
-<li> The EU-funded <a href="http://www.coregrid.net">CoreGRID Network of Excellence</a>
-<li> The <a href="http://www.cs.vu.nl/das3/">Distributed ASCI Supercomputer (DAS)</a>
-<li> The VU's own <a href="http://www.cs.vu.nl/ibis/">Ibis</a> project
+<li>Ibis</li>
+<li>JavaGAT</li>
+<li>Saga</li>
 </ul>
-</p>
 
 <p>
 Interested in contributing to this exciting field? You are
-warmly welcomed to contact 
-<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.
+warmly invited to contact 
+<a href="http://www.cs.vu.nl/~reeuwijk">Kees van Reeuwijk</a>.
 </p>
 
 <hr>
 
 
 
-<h2>Masters Theses (and other student projects)</h2>
-
-Within our ongoing research work, we frequently have open sub problems
-that can be assigned to students as thesis projects.
+<h2>Masters projects (and other student projects)</h2>
 
 <p>
+Within our ongoing research work, we frequently have open sub-problems
+that can be assigned to students as thesis projects.
+</p>
 
+<p>
 As prerequisite, you should have knowledge from one or two of the following
 courses:
 <ul>
-<li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a>
-<li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a>
-<li><a href="http://www.cs.vu.nl/obp/education/perfeval/">Performance Analysis of Communication Networks</a>
-<li><a href="http://www.cs.vu.nl/~kielmann/cgc/">Cluster and Grid Computing</a>
+<li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a></li>
+<li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~graphics/">Computer Graphics</a></li>
+<li><a href="http://www.cs.vu.nl/obp/education/perfeval/">Performance Analysis of Communication Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~kielmann/cgc/">Cluster and Grid Computing</a></li>
 </ul>
-
-Depending on the project, other courses, such as
-<a href="http://www.cs.vu.nl/~graphics/">Computer Graphics</a>,
-may also be prerequisite.
+</p>
+<p>
 As our work is mostly practically oriented, your programming skills should 
 at least be reasonable.
+</p>
 
 <h3>Open Topics</h3>
 
@@ -71,12 +67,13 @@ For other types of projects
 (like an Individual Programming Assignment for PDCS students),
 size and orientation of a project can be varied.
 If you are interested in doing your thesis with us,
-please contact <a href="http://www.cs.vu.nl/~kielmann/">dr. Thilo Kielmann.</a>
+please contact <a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk</a>.
 </p>
 
 
 <h3>Ibis: Efficient Java Based Grid Computing</h3>
 
+<p>
 <a href="http://www.cs.vu.nl/ibis">The Ibis project</a>
  is creating an efficient, Java-based platform for grid 
 computing. The Ibis project currently consists of the Ibis communication 
@@ -84,10 +81,12 @@ library, a variety of programming models,
 the Java Grid Application Toolkit (JavaGAT), 
 and the Zorilla peer-to-peer grid middleware. 
 All components can be deployed on any grid platform, due to the use of Java.
+</p>
 
 <ul>
 <li><b>JavaGAT scripting interface / shell</b></li>
 
+<p>
 Running experiments on any grid system is hard. Jobs tend to get stuck
 in a queue, fail for unknown reasons, and keeping track of all input
 files, output files and code is quite hard. Using the JavaGAT,
@@ -97,9 +96,11 @@ line. If a set of command-line tools would be available for the GAT this
 would be possible. This could be in te form of a JavaGAT shell, a number
 of stand-alone tools, a specialized scripting language with an
 interpreter, or all of the above.
+</p>
 
 <li><b>GAT Desktop</b></li>
 
+<p>
 Design and Implementation of a GAT Desktop. Using the JavaGAT as a
 backend, this environment is able to submit jobs, handle files, steer
 and monitor applications running on a grid, all from a drag-and-drop
@@ -107,9 +108,11 @@ desktop-like environment.
 See the 
 <a href="http://wiki.cogkit.org/index.php/Java_CoG_Kit">
 Java CoG Desktop</a> for an example of such a system.
+</p>
 
 <li><b>Adaptive Applications using JavaGAT</b></li>
 
+<p>
 At present there is a "Adaptive" module in Ibis which is able to
 automatically adapt the resources of a running application to (changes
 in) the environment. New resources are automatically added if an
@@ -121,9 +124,11 @@ broker and second it is only able to monitor and steer Satin
 applications. Adaptive JavaGAT would be a re-design and
 re-implementation of this module which is ideally able to adapt any
 application running on any middleware supported by the JavaGAT.
+</p>
 
 <li><b>A Proxy GAT</b></li>
 
+<p>
 While the (Java)GAT nicely interfaces to various grid middleware packages,
 one still needs to have adaptors to all this middleware installed on the
 client machine from which GAT applications should be run. Installation
@@ -133,17 +138,21 @@ that communicate using ssh from a light-weight client machine (like a laptop)
 to a machine on which both a "real" GAT and the middleware is installed.
 This way, GAT programs could run without any middleware installation on
 the client machines.
+</p>
 
 <li><b>Ibis on Infiniband</b></li>
 
+<p>
 The Ibis communication library was designed to be usable on multiple
 different network substrates. Add a new Ibis implementation capable of
 communicating over 
 <a href="http://en.wikipedia.org/wiki/Infiniband">Infiniband</a>,
 a high-speed network technology.
+</p>
 
 <li><b>Ibis on Myrinet</b></li>
 
+<p>
 The Ibis communication library was designed to be usable on multiple
 different network substrates. Add a new Ibis implementation capable of
 communicating over 
@@ -151,11 +160,13 @@ communicating over
 the fast optical network present in both the
 <a href="http://www.cs.vu.nl/das2/">DAS-2</a> and 
 <a href="http://www.cs.vu.nl/das3/">DAS-3</a>.
+</p>
 
 
 
 <li><b>JavaGAT Grenchmark</b></li>
 
+<p>
 <a href="http://grenchmark.st.ewi.tudelft.nl/">GrenchMark</a>
 is a framework for synthetic Grid workloads generation,
 submission to real / simulated environments, and for retrieving and
@@ -164,7 +175,51 @@ applications using Koala and a few other middlewares. Extend Grenchmark
 to use the JavaGAT as a back-end
 such that is possible to run Grenchmark on other middlewares (for instance
 Zorilla) as well.
+</p>
+</ul>
 
+<h2>Bachelors Theses</h2>
+
+
+Within the field of grid computing, topics for bachelors theses can also be 
+made available.
+According to our 
+<a href="http://www.cs.vu.nl/cs/projects.html"><strong>general ideas
+about Bachelors theses</strong></a> we can offer literature-study type of
+assignments that explore certain aspects of grids.
+For these topics, we are currently interested in the answers to the open 
+questions. This means that your thesis would not just be written for getting 
+the grade and immediate disposal in the trash...
+
+<h4>Open Topics</h4>
+
+<ul>
+<li>The supervision of B.Sc. projects is currently done by
+<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
+Please contact him for more information.
+</ul>
+
+<h2>Literature Studies</h2>
+
+<p>
+Within the Computer Systems section, literature studies (and their examination)
+are organized by 
+<a href="http://www.cs.vu.nl/~crispo/teaching/literature_study.html">
+dr. Bruno Crispo</a>.
+For the necessary technical supervision, please refer to
+<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
+Please contact him for more information.
+</p>
+
+<hr>
+
+<h2>Programming assignments</h2>
+
+Some smaller or non-scientific projects, suitable, for example, for
+an Individual Programming Assignment for PDCS students.
+
+
+<ul>
 <li><b>JSDL support for the JavaGAT</b></li>
 
 Website quote:
@@ -201,42 +256,4 @@ for Condor. Design and implement a job submission adaptor
 for Condor in the JavaGAT. Also, an evaluation of this adaptor on a pool of
 student lab machines will completement this project.
 
-
 </ul>
-
-<p>
-
-<h2>Bachelors Theses</h2>
-
-
-Within the field of grid computing, topics for bachelors theses can also be 
-made available.
-According to our 
-<a href="http://www.cs.vu.nl/cs/projects.html"><strong>general ideas
-about Bachelors theses</strong></a> we can offer literature-study type of
-assignments that explore certain aspects of grids.
-For these topics, we are currently interested in the answers to the open 
-questions. This means that your thesis would not just be written for getting 
-the grade and immediate disposal in the trash...
-
-<h4>Open Topics</h4>
-
-<ul>
-<li>The supervision of B.Sc. projects is currently done by
-<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
-Please contact him for more information.
-</ul>
-
-<hr>
-
-<h2>Literature Studies</h2>
-
-Within the Computer Systems section, literature studies (and their examination)
-are organized by 
-<a href="http://www.cs.vu.nl/~crispo/teaching/literature_study.html">
-dr. Bruno Crispo</a>.
-For the necessary technical supervision, please refer to
-<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
-Please contact him for more information.
-
-

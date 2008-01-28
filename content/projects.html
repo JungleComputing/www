@@ -84,6 +84,60 @@ All components can be deployed on any grid platform, due to the use of Java.
 </p>
 
 <ul>
+<li><b>Grid implementation of the coordination language Reo</b></li>
+
+<p>
+The coordination language Reo offers a model of concurrency where
+interaction constitutes the only first-class concept.
+</p>
+<p>
+In the connector calculus that underlies Reo, every connector denotes
+a concrete interaction (protocol). Simple composition rules in Reo
+allow construction of arbitrarily complex protocols out of a handful
+of primitive protocols embodied in connectors, called channels. A
+concurrent application in Reo consists of a number of active entities
+(threads or processes) that anonymously communicate with each other
+through connectors. Reo enforces a strict separation of communication
+and computation, which makes the semantics of a connector independent of
+the semantics of the active entities that it interconnects. This supports
+scalable compositional construction of massively concurrent systems.
+Reo derives its high expressiveness from its unique feature of allowing
+arbitrary combination of exclusion, synchrony, and asynchrony in a single
+coherent compositional model. The semantics of Reo exists in various
+formal models, each serving a different purpose, e.g., correctness
+proofs, reasoning about various properties of connectors, model checking,
+(centralized and distributed)   implementation, etc.
+</p>
+<p>
+The goal of this project is to use Reo connectors to compose and
+coordinate Grid services, using Ibis.  The scheme involves creating a
+local Java thread as a proxy for each remote Grid service.  Creation of
+these proxies must be as mechanical and automated as possible, given
+the formal definitions of their interfaces and behavior.  Communication
+between a proxy and its corresponding Grid service will use the Ibis
+library.  Formal parameters of types inPort and outPort objects that
+support get and put operations provide the only means of communication
+between a proxy and Reo connectors.
+</p>
+<p>
+To generate executable code from graphical specification of Reo circuits,
+we use constraint automata as an intermediary representation. Algorithms
+exist to compositionally derive the constraint automaton of a Reo circuit
+from the constraint automata of its constituent channels. Programs
+also exist to automate this process and to generate Java code from
+the resulting automata.  These tools exist as plug-ins in the Eclipse
+environment. The focus of this project is to devise effective schemes
+for construction of local-thread proxies for Grid services using Ibis,
+and the necessary Eclipse tools and plug-ins to semi-automate their
+generation integration with Reo.
+</p>
+<p>
+Implement the multi-threaded shared-memory version of Reo on top IPL,
+giving a working but probably far-for-efficient distributed implementation
+of Reo.
+</p>
+
+
 <li><b>JavaGAT scripting interface / shell</b></li>
 
 <p>

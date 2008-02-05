@@ -2,19 +2,27 @@
 
 
 
-<h2>Masters projects and other student projects</h2>
+<h2>Student projects</h2>
 <p>
-VU students who want to help us develop new features for Ibis
-are very welcome.
-Within our ongoing research work, we frequently have open sub-problems
-that can be assigned to students as thesis projects.
-Have a look at the projects on this page,
-and see if there is anything that matches your skills. 
+VU students who want to help us develop new features for Ibis are
+very welcome.  Within our ongoing research work, we frequently have
+open sub-problems that can be assigned to students as Bachelor or Master
+thesis projects. Literature studies and individual programming
+assignments are often also available.
+Have a look at the projects on this page, and see if there is anything
+that matches your skills.
+</p>
+
+<h2>Master Projects</h2>
+
+<p>
+For general information about Master projects,
+see the <a href="http://www.few.vu.nl/onderwijs/masters/cs/masterprojects.html">overview</a> page.
 </p>
 
 <p>
-As prerequisite, you should have knowledge from one or two of the following
-courses:
+As prerequisite for Ibis projects, you should have knowledge from one
+or two of the following courses:
 <ul>
 <li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a></li>
 <li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a></li>
@@ -26,17 +34,17 @@ courses:
 <p>
 As our work is mostly practically oriented, your programming skills should 
 at least be reasonable.
+</p>
 
 <h3>Open Topics</h3>
 
 <p>
 The following open topics are grouped by projects or topic area.
-The following descriptions merely indicate topics; the exact definition of
-an M.Sc. project needs to be negotiated with the individual student,
+The following descriptions merely indicate topics; the exact definition
+of a Master project will be negotiated with the individual student,
 to match interests and also the size of 36 ECTS credit points per project.
-For other types of projects 
-(like an Individual Programming Assignment for PDCS students),
-size and orientation of a project can be varied.
+For other types of projects (like an Individual Programming Assignment
+for PDCS students), size and orientation of a project can be varied.
 If you are interested in doing your thesis with us,
 please contact <a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk</a>.
 </p>
@@ -46,38 +54,39 @@ please contact <a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk
 
 <p>
 <a href="http://www.cs.vu.nl/ibis">The Ibis project</a>
- is creating an efficient, Java-based platform for grid 
-computing. The Ibis project currently consists of the Ibis communication 
-library, a variety of programming models, 
-the Java Grid Application Toolkit (JavaGAT), 
-and the Zorilla peer-to-peer grid middleware. 
-All components can be deployed on any grid platform, due to the use of Java.
+is creating an efficient, Java-based platform for grid computing. The Ibis
+project currently consists of the Ibis communication library, a variety
+of programming models, the Java Grid Application Toolkit (JavaGAT),
+and the Zorilla peer-to-peer grid middleware.  All components can be
+deployed on any grid platform, due to the use of Java.
 </p>
 
 <ul>
 <li><b>Ibis over UDP</b></li>
 
 <p>
-The Ibis communication library was designed to be usable on multiple different 
-network substrates. Add a new Ibis implementation capable of communicating over
-the UDP protocol, avoiding the overheads caused by the commonly used TCP.
+The Ibis communication library was designed to be usable on multiple
+different network substrates. Add a new Ibis implementation capable of
+communicating over the UDP protocol, avoiding the overheads caused by
+the commonly used TCP.
 </p>
 
 <li><b>JSDL support for the JavaGAT</b></li>
 
 <p>
-Website quote: "The Job Submission Description Language (JSDL) is a language
-for describing the requirements of computational jobs for submission to
-resources, particularly in Grid environments, though not restricted to the
-latter." As JSDL is becoming a de-facto standard for job descriptions, it 
-becomes necessary to base JavaGAT's job descriptions on it. In this project,
-it is needed to revise JavaGAT's job description class such that it uses
-JSDL keys, aligned with the recently standardized Simple API for Grid
-Applications (SAGA). Tools for parsing JSDL files (to create job descirptions)
-and for creating JSDL files from JavaGAT job descriptions will become 
-essential. Conversions between different job descriptions (based on what the
-user required in his/her JSDL, and what the underlying middleware can provide)
-will require some form of "intelligent" matching.
+Website quote: "The Job Submission Description Language (JSDL) is a
+language for describing the requirements of computational jobs for
+submission to resources, particularly in Grid environments, though not
+restricted to the latter." As JSDL is becoming a de-facto standard for
+job descriptions, it becomes necessary to base JavaGAT's job descriptions
+on it. In this project, it is needed to revise JavaGAT's job description
+class such that it uses JSDL keys, aligned with the recently standardized
+Simple API for Grid Applications (SAGA). Tools for parsing JSDL files
+(to create job descirptions) and for creating JSDL files from JavaGAT
+job descriptions will become essential. Conversions between different
+job descriptions (based on what the user required in his/her JSDL, and
+what the underlying middleware can provide) will require some form of
+"intelligent" matching.
 </p>
 
 <p>
@@ -100,6 +109,7 @@ the commonly used TCP.
 The coordination language Reo offers a model of concurrency where
 interaction constitutes the only first-class concept.
 </p>
+
 <p>
 In the connector calculus that underlies Reo, every connector denotes
 a concrete interaction (protocol). Simple composition rules in Reo
@@ -118,6 +128,7 @@ formal models, each serving a different purpose, e.g., correctness
 proofs, reasoning about various properties of connectors, model checking,
 (centralized and distributed)   implementation, etc.
 </p>
+
 <p>
 The goal of this project is to use Reo connectors to compose and
 coordinate Grid services, using Ibis.  The scheme involves creating a
@@ -129,6 +140,7 @@ library.  Formal parameters of types inPort and outPort objects that
 support get and put operations provide the only means of communication
 between a proxy and Reo connectors.
 </p>
+
 <p>
 To generate executable code from graphical specification of Reo circuits,
 we use constraint automata as an intermediary representation. Algorithms
@@ -141,6 +153,7 @@ for construction of local-thread proxies for Grid services using Ibis,
 and the necessary Eclipse tools and plug-ins to semi-automate their
 generation integration with Reo.
 </p>
+
 <p>
 Implement the multi-threaded shared-memory version of Reo on top IPL,
 giving a working but probably far-for-efficient distributed implementation
@@ -162,45 +175,45 @@ Zorilla) as well.
 </p>
 </ul>
 
-<h2>Bachelors Theses</h2>
+<hr>
 
+<h2>Bachelor Projects</h2>
 
-Within the field of grid computing, topics for bachelors theses can also be 
-made available.
-According to our 
-<a href="http://www.cs.vu.nl/cs/projects.html"><strong>general ideas
-about Bachelors theses</strong></a> we can offer literature-study type of
-assignments that explore certain aspects of grids.
-For these topics, we are currently interested in the answers to the open 
-questions. This means that your thesis would not just be written for getting 
+<p>
+See the <a href="http://www.few.vu.nl/onderwijs/bachelors/inf/bachelorproject.html">overview</a> for general information.
+We can generally come up with assignments that explore certain aspects
+of grid computing or related subjects.
+This means that your thesis would not just be written for getting 
 the grade and immediate disposal in the trash...
 
 <h4>Open Topics</h4>
 
-<ul>
-<li>The supervision of B.Sc. projects is currently done by
-<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
-Please contact him for more information.
-</ul>
+There are currently no open topics, but that doesn't
+mean we can't give you a projects.  Please contact <a
+href="http://www.cs.vu.nl/~reeuwijk/">Kees van Reeuwijk</a> for more
+information.
+
+<hr>
 
 <h2>Literature Studies</h2>
 
 <p>
-Within the Computer Systems section, literature studies (and their examination)
+Within the Computer Systems section, literature studies and their examination
 are organized by 
-<a href="http://www.cs.vu.nl/~crispo/teaching/literature_study.html">
-dr. Bruno Crispo</a>.
+<a href="http://www.few.vu.nl/%7Ekmitrok/literature_study2008.html">
+Katerina Mitrokotsa</a>.
 For the necessary technical supervision, please refer to
-<a href="http://www.cs.vu.nl/~reeuwijk/">dr. Kees van Reeuwijk</a>.
-Please contact him for more information.
+<a href="http://www.cs.vu.nl/~reeuwijk/">Kees van Reeuwijk</a>.
 </p>
 
 <hr>
 
 <h2>Programming assignments</h2>
 
+<p>
 Some smaller or non-scientific projects, suitable, for example, for
 an Individual Programming Assignment for PDCS students.
+</p>
 
 
 <ul>

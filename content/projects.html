@@ -55,18 +55,18 @@ please contact <a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk
 <p>
 <a href="http://www.cs.vu.nl/ibis">The Ibis project</a>
 is creating an efficient, Java-based platform for grid computing. The Ibis
-project currently consists of the Ibis communication library, a variety
+project currently consists of the IPL communication library, a variety
 of programming models, the Java Grid Application Toolkit (JavaGAT),
 and the Zorilla peer-to-peer grid middleware.  All components can be
 deployed on any grid platform, due to the use of Java.
 </p>
 
 <ul>
-<li><b>Ibis over UDP</b></li>
+<li><b>IPL over UDP</b></li>
 
 <p>
-The Ibis communication library was designed to be usable on multiple
-different network substrates. Add a new Ibis implementation capable of
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
 communicating over the UDP protocol, avoiding the overheads caused by
 the commonly used TCP.
 </p>
@@ -99,8 +99,8 @@ it would be possible to use JSDL on a number of different middlewares.
 <li><b>Grid implementation of the coordination language Reo</b></li>
 
 <p>
-The Ibis communication library was designed to be usable on multiple
-different network substrates. Add a new Ibis implementation capable of
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
 communicating over the UDP protocol, avoiding the overheads caused by
 the commonly used TCP.
 </p>
@@ -126,16 +126,16 @@ arbitrary combination of exclusion, synchrony, and asynchrony in a single
 coherent compositional model. The semantics of Reo exists in various
 formal models, each serving a different purpose, e.g., correctness
 proofs, reasoning about various properties of connectors, model checking,
-(centralized and distributed)   implementation, etc.
+(centralized and distributed) implementation, etc.
 </p>
 
 <p>
 The goal of this project is to use Reo connectors to compose and
-coordinate Grid services, using Ibis.  The scheme involves creating a
+coordinate Grid services, using the IPL. The scheme involves creating a
 local Java thread as a proxy for each remote Grid service.  Creation of
 these proxies must be as mechanical and automated as possible, given
 the formal definitions of their interfaces and behavior.  Communication
-between a proxy and its corresponding Grid service will use the Ibis
+between a proxy and its corresponding Grid service will use the IPL
 library.  Formal parameters of types inPort and outPort objects that
 support get and put operations provide the only means of communication
 between a proxy and Reo connectors.
@@ -149,7 +149,7 @@ from the constraint automata of its constituent channels. Programs
 also exist to automate this process and to generate Java code from
 the resulting automata.  These tools exist as plug-ins in the Eclipse
 environment. The focus of this project is to devise effective schemes
-for construction of local-thread proxies for Grid services using Ibis,
+for construction of local-thread proxies for Grid services using the IPL,
 and the necessary Eclipse tools and plug-ins to semi-automate their
 generation integration with Reo.
 </p>

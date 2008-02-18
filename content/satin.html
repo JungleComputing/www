@@ -10,6 +10,23 @@
 </table>
 
 <h2>Satin</h2>
+
+Satin extends Java with Cilk like primitives, that make it very convenient for
+the programmer to write divide and conquer style programs. Unlike
+manager/worker programs, divide-and-conquer algorithms operate by recursively
+dividing a problem into smaller subproblems. This recursive subdivision goes on
+until the remaining subproblem becomes trivial to solve. After solving
+subproblems, their results are recursively recombined until the final solution
+is assembled.  Due to it's hierarchical nature, the divide-and-conquer model
+maps cleanly to grid systems, which    also tend to have an hierarchical
+structure. Satin contains a efficient and simple load-balancing algorithm,
+Cluster-aware Random Stealing (CRS), which is shown to outperform existing
+load- balancing strategies on multi-cluster systems.  In addition, Satin also
+provides efficient fault-tolerance, malleability (e.g. the ability to cope with
+dynamically changing number of processors) and migration in a way that is
+transparent to the application. 
+
+<!--
 <p>We have extended the Java language with Cilk
 like primitives, that make it very convenient for the programmer to
 write divide and conquer style programs.
@@ -32,3 +49,7 @@ thus enlarging the set of possible grid applications.</p>
 <p>We did experiments on a real grid testbed using 40 processors in total, in 6 machines located at 5 sites all over Europe, with 4 different processor architectures. Satin on the TCP Ibis implementation ran on all sites, in pure Java, without even having to recompile anything.</p>
 
 <p>Grid applications have to cope with dynamically changing computing resources as machines may crash or be claimed by other, higher-priority applications. We have implemented a mechanism that enables fault-tolerance, malleability (e.g. the ability to cope with dynamically changing number of processors) and migration for divide-and-conquer applications on the Grid. The novelty of our approach is restructuring the computation tree which eliminates redundant computation and salvages partial results computed by the processors leaving the computation. This enables the applications to adapt to dynamically changing numbers of processors and to migrate the computation without loss of work. Our mechanism is easy to implement and deploy in grid environment. The overhead it incurrs is close to zero.</p>
+
+-->
+
+

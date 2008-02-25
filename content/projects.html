@@ -71,31 +71,6 @@ communicating over the UDP protocol, avoiding the overheads caused by
 the commonly used TCP.
 </p>
 
-<li><b>JSDL support for the JavaGAT</b></li>
-
-<p>
-Website quote: "The Job Submission Description Language (JSDL) is a
-language for describing the requirements of computational jobs for
-submission to resources, particularly in Grid environments, though not
-restricted to the latter." As JSDL is becoming a de-facto standard for
-job descriptions, it becomes necessary to base JavaGAT's job descriptions
-on it. In this project, it is needed to revise JavaGAT's job description
-class such that it uses JSDL keys, aligned with the recently standardized
-Simple API for Grid Applications (SAGA). Tools for parsing JSDL files
-(to create job descirptions) and for creating JSDL files from JavaGAT
-job descriptions will become essential. Conversions between different
-job descriptions (based on what the user required in his/her JSDL, and
-what the underlying middleware can provide) will require some form of
-"intelligent" matching.
-</p>
-
-<p>
-Multiple projects have started to implement 
-<a href="http://www.gridforum.org/documents/GFD.56.pdf">JSDL</a> 
-interfaces to their middleware. With a JSDL-aware frontend for the JavaGAT,
-it would be possible to use JSDL on a number of different middlewares.
-</p>
-
 <li><b>Grid implementation of the coordination language Reo</b></li>
 
 <p>

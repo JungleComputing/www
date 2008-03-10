@@ -71,6 +71,15 @@ communicating over the UDP protocol, avoiding the overheads caused by
 the commonly used TCP.
 </p>
 
+<li><b>IPL over Bluetooth</b></li>
+
+<p>
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
+communicating over the Bluetooth protocol, allowing efficient
+wireless communication.
+</p>
+
 <li><b>Grid implementation of the coordination language Reo</b></li>
 
 <p>
@@ -135,6 +144,24 @@ giving a working but probably far-for-efficient distributed implementation
 of Reo.
 </p>
 
+
+<li><b>Awari in Ibis (challenging)</b></li>
+
+<p>
+Develop an Ibis program that computes all possible moves in the
+board game Awari.
+We have an existent and very efficient implementation in C++ plus
+assembly code for some `hotspots'. The challenge is to re-implement the
+program using the Ibis library. This would result in a much more portable
+and `grid-aware' program.
+</p>
+<p>
+However, since the original implementation used a number of machine-specific
+tricks to get a solution in a reasonable time, and since most of these
+tricks will not be feasible in the new environment,
+an entirely
+different solution strategy may be necessary. 
+</p>
 
 <li><b>Poker player (challenging)</b></li>
 

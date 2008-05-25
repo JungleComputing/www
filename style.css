@@ -67,12 +67,11 @@ h2.news {
 	text-align: center;
 }
 
-p.newsitem {
+p.news {
         border: dotted #CC9900;
 	border-width: thin;
 	font-size: 11px;
 	background-color: #FFFF66;
-
 
 	display: block;
 	text-decoration: none;

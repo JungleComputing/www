@@ -1,5 +1,12 @@
 <table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/projects/ibis/">Download Ibis</a></td>
+<td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/frs/?group_id=16">Download Ibis RMI</a></td>
+<td class=topmenu><a class=topmenu href="javadoc/rmi/index.html">Javadoc</a></td>
+<td class=topmenu><a class=topmenu href="downloads/rmi/usersguide.pdf">User's Guide</a></td>
+<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=16">Report Bugs</a></td>
+</tr>
+</table>
+
+<table class=topmenu><tr>
 <td class=topmenu><a class=topmenu href="publications.html#ibis">Ibis Publications</a></td>
 <td class=topmenu><a class=topmenu href="talks.html#ibis">Ibis Talks</a></td>
 <td class=topmenu><script type="text/javascript"> generate_contact_address( "ibis", "cs.vu.nl" ); </script></td>
@@ -8,4 +15,21 @@
 
 <h2>Remote Method Invocation</h2>
 
-<p>We built a Remote Method Invocation (RMI) implementation on top of Ibis. This version is included in the Ibis distribution. RMI is described <a href= "http://java.sun.com/j2se/1.4.2/docs/guide/rmi/index.html">here</a>. Ibis boosts RMI performance using several optimizations, especially to avoid the high overhead of runtime type inspection that current RMI implementations have. Earlier projects (e.g., <a href= "http://www.cs.vu.nl/manta/">Manta</a>) applied similar optimizations by writing parts of the runtime system in native code (C instead of Java), giving up Java's high portability. The philosophy behind Ibis is to try to obtain good performance without using any native code, but allow native solutions to further optimize special cases. For example, a Grid application developed with Ibis can use a pure-Java RMI implementation over TCP/IP that will run "everywhere". However, when the application runs on, say, a Myrinet cluster, the RMI runtime system can request Ibis to load a more efficient communication implementation for Myrinet that partially uses native code.</p>
+<p>
+We built a Remote Method Invocation (RMI) implementation on top of Ibis.
+RMI is described <a href= "http://java.sun.com/j2se/1.4.2/docs/guide/rmi/index.html">here</a>.
+Ibis boosts RMI performance using several optimizations, especially to avoid
+the high overhead of runtime type inspection that current RMI implementations
+have.
+Earlier projects (e.g., <a href= "http://www.cs.vu.nl/manta/">Manta</a>)
+applied similar optimizations by writing parts of the runtime system
+in native code (C instead of Java), giving up Java's high portability.
+The philosophy behind Ibis is to try to obtain good performance without
+using any native code, but allow native solutions to further optimize
+special cases. For example, a Grid application developed with Ibis
+can use a pure-Java RMI implementation over TCP/IP that will
+run "everywhere".
+However, when the application runs on, say, a Myrinet cluster,
+the RMI runtime system can request Ibis to load a more efficient
+communication implementation for Myrinet that partially uses native code.
+</p>

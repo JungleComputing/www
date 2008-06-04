@@ -25,17 +25,6 @@ see the <a href="http://www.few.vu.nl/onderwijs/masters/cs/masterprojects.html">
 </p>
 
 <p>
-As prerequisite for Ibis projects, you should have knowledge from one
-or two of the following courses:
-<ul>
-<li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a></li>
-<li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a></li>
-<li><a href="http://www.cs.vu.nl/~graphics/">Computer Graphics</a></li>
-<li><a href="http://www.cs.vu.nl/obp/education/perfeval/">Performance Analysis of Communication Networks</a></li>
-<li><a href="http://www.cs.vu.nl/~kielmann/cgc/">Cluster and Grid Computing</a></li>
-</ul>
-</p>
-<p>
 As our work is mostly practically oriented, your programming skills should 
 at least be reasonable.
 </p>
@@ -50,11 +39,22 @@ to match interests and also the size of 36 ECTS credit points per project.
 For other types of projects (like an Individual Programming Assignment
 for PDCS students), size and orientation of a project can be varied.
 If you are interested in doing your thesis with us,
-please contact <a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk</a>.
+please contact 
+<a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk</a>, 
+unless stated otherwise with a particular topic.
 </p>
 
+<p>
+Here are shortcuts to general themes of topics:
+</p>
+<ul>
+<li><a href="#m-ibis">Ibis</a>
+<li><a href="#m-saga">SAGA (and JavaGAT)</a>
+<li><a href="#m-graphics">Graphics</a>
+<li><a href="#m-misc">Miscellaneous</a>
+</ul>
 
-<h3>Ibis: Efficient Java Based Grid Computing</h3>
+<h3><a name="m-ibis">Ibis: Efficient Java Based Grid Computing</a></h3>
 
 <p>
 <a href="http://www.cs.vu.nl/ibis">The Ibis project</a>
@@ -63,6 +63,18 @@ project currently consists of the IPL communication library, a variety
 of programming models, the Java Grid Application Toolkit (JavaGAT),
 and the Zorilla peer-to-peer grid middleware.  All components can be
 deployed on any grid platform, due to the use of Java.
+</p>
+
+<p>
+As prerequisite for Ibis projects, you should have knowledge from one
+or two of the following courses:
+<ul>
+<li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a></li>
+<li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~graphics/">Computer Graphics</a></li>
+<li><a href="http://www.cs.vu.nl/obp/education/perfeval/">Performance Analysis of Communication Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~kielmann/cgc/">Cluster and Grid Computing</a></li>
+</ul>
 </p>
 
 <ul>
@@ -120,7 +132,33 @@ For more information, contact
 <a href="http://www.cs.vu.nl/~fjseins/">Dr. Frank J. Seinstra</a>.
 </p>
 
+<li><b>Awari in Ibis (challenging)</b></li>
 
+<p>
+Develop an Ibis program that computes all possible moves in the
+board game Awari.
+We have an existent and very efficient implementation in C++ plus
+assembly code for some `hotspots'. The challenge is to re-implement the
+program using the Ibis library. This would result in a much more portable
+and `grid-aware' program.
+</p>
+<p>
+However, since the original implementation used a number of machine-specific
+tricks to get a solution in a reasonable time, and since most of these
+tricks will not be feasible in the new environment,
+an entirely
+different solution strategy may be necessary. 
+</p>
+
+
+</ul>
+
+<h3><a name="m-saga">SAGA (and JavaGAT)</a></h3>
+<h3><a name="m-graphics">Graphics</a></h3>
+
+<h3><a name="m-misc">Miscellaneous</a></h3>
+
+<ul>
 <li><b>Grid implementation of the coordination language Reo</b></li>
 
 <p>
@@ -185,24 +223,6 @@ giving a working but probably far-for-efficient distributed implementation
 of Reo.
 </p>
 
-
-<li><b>Awari in Ibis (challenging)</b></li>
-
-<p>
-Develop an Ibis program that computes all possible moves in the
-board game Awari.
-We have an existent and very efficient implementation in C++ plus
-assembly code for some `hotspots'. The challenge is to re-implement the
-program using the Ibis library. This would result in a much more portable
-and `grid-aware' program.
-</p>
-<p>
-However, since the original implementation used a number of machine-specific
-tricks to get a solution in a reasonable time, and since most of these
-tricks will not be feasible in the new environment,
-an entirely
-different solution strategy may be necessary. 
-</p>
 
 <li><b>Poker player (challenging)</b></li>
 

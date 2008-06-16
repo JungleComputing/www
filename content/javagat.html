@@ -15,20 +15,20 @@
 </table>
 
 <h2>JavaGAT</h2>
-<p>The Java Grid Application Toolkit (JavaGAT) offers a set of
+<p>Java Grid Application Toolkit (JavaGAT) offers a set of
 coordinated, generic and flexible APIs for accessing grid services
-from application codes, portals, data managements systems.</p>
+from application codes, portals, data managements systems, etc.</p>
 
-<p>the JavaGAT sits between grid applications and numerous types of
+<p>JavaGAT sits between grid applications and numerous types of
 grid middleware, such as Globus, Unicore, SSH or Zorilla. JavaGAT
 lifts the burden of grid application programmers by providing them
 with a uniform interface that provides file access, job submission,
 monitoring, and access to information services. As a result, grid
-application programmers need only learn a single API to obtain access
-to the entire grid. Due to its modular design, the JavaGAT can easily
+application programmers need only to learn a single API to obtain access
+to the entire grid. Due to its modular design, JavaGAT can easily
 be extended with support for other grid middleware layers.</p>
 
-<p>The structure of the JavaGAT is shown in the picture below.</p>
+<p>The structure of JavaGAT is shown in the picture below.</p>
 
 <img src="images/gat-design.png">
 
@@ -37,10 +37,10 @@ The idea is that grid applications do not use grid middleware directly. Instead,
 The GAT engine dynamically "routes" the API calls to the correct grid middleware.
 </p>
 
-<p>We have plugins (called Adaptors) for many different grid middleware systems.
+<p>We have plugins (called adaptors) for many different grid middleware systems.
 The following table lists the adaptors that come with the standard JavaGAT distribution.
-All adaptors are implemented in Java, an libraries that are needed are included in the distribution.
-JavaGAT does not rely on any external packages or libraries.
+All adaptors are implemented in java, and libraries that are needed are included in the distribution.
+JavaGAT does not rely on any pre installed external packages or libraries.
 <BR><BR>
 
 <table summary="adaptor table" width="100%" cellspacing="0" frame=border rules=all class="adaptors" >

@@ -54,8 +54,9 @@ td.main {
 /* TOP MENU */
 
 div.topmenu {
-    background-color: #1966AE;
-    color: white;
+/*    background-color: #1966AE;*/
+    background-color: #6699C9;
+    color: #003B73;
     width: 950px;
 }
 
@@ -81,13 +82,14 @@ a.topmenu {
 }
 
 a.topmenu:hover {
-     color: #1966AE;
-     background-color: white;
+     background-color: #E5EEF6;
+     color: #CC0000;
+     text-decoration: underline;
 }
 
 a.topmenu_active {
-     color: #1966AE;
-     background-color: white;
+     background-color: #E5EEF6;
+     color: #CC0000;
 }
 
 /* NEWS  */
@@ -100,6 +102,7 @@ a.topmenu_active {
 table.news {
     width: 200px;
     vertical-align: top;
+    border-collapse: collapse;
 }
 
 tr.news {
@@ -179,6 +182,7 @@ a.level2 {
 
 a.menu_active {
     background-color: #E5EEF6;
+    color: #CC0000;
 }
 
 a.menu:hover {

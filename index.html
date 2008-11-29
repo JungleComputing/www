@@ -25,8 +25,6 @@
 		<td class="main" align="left">
 		    <a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
 		</td>
-		<td class="main" align="center">
-		</td>
 		<td class="main" align="right">
 		    <a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
 		</td>
@@ -35,7 +33,7 @@
 	    <!-- TOP MENU -->
 
 	    <tr>
-		<td class="main" colspan=3>
+		<td class="main" colspan=2>
 		    <div class="topmenu">
 			<!--			<?php include ("menus/top-menu-index.html"); ?> -->
 			<table class="topmenu" frame=void rules=none>
@@ -57,9 +55,12 @@
 	    <!-- BANNER & NEWS -->
 
 	    <tr>
-		<td class="main" colspan=2>
-		    <img src="images/balloons-text.png" width=743 height=150 alt="Banner">
+		<td class="main">
+		    <img src="images/balloons-text.png" alt="Banner">
+		    <!-- CONTENT -->
+		    <?php include ("content/index.html"); ?> 
 		</td>
+
 		<td class="main" id="news_cell" rowspan=2>
 		    <div class="news">
 			<table class="news">
@@ -76,14 +77,6 @@
 			    </td></tr>
 			</table>
 		</div>
-		</td>
-	    </tr>
-
-	    <!-- CONTENT -->
-
-	    <tr>
-		<td class="main" colspan=2>
-		    <?php include ("content/index.html"); ?> 
 		</td>
 	    </tr>
 

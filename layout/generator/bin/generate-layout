@@ -1,0 +1,2 @@
+#!/bin/bash
+exec java -cp lib/*.jar ibis.www.generator.Generator $@

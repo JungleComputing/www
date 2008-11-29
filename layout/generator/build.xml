@@ -1,0 +1,43 @@
+<project name="Ibis Website generator" default="build" basedir=".">
+
+    <description>
+	Builds ibis website (mostly layout)
+    </description>
+
+    <!-- Global properties -->
+
+    <property name="jar" location="lib/ibis-www-generator.jar" />
+
+    <target name="build" description="build the examples">
+        <!-- Clean up -->
+        <delete dir="tmp" />
+        <delete dir="lib" />
+
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="tmp" />
+        <mkdir dir="lib" />
+
+        <!-- Compile the java code from ${src} into ${tmp} -->
+        <javac srcdir="src"
+               destdir="tmp"
+               debug="on"
+               source="1.5"
+               target="1.5"
+               >
+            <compilerarg value="-Xlint:unchecked" />
+        </javac>
+
+
+        <!-- Put everything in ${tmp} into the jar file -->
+        <jar jarfile="${jar}" basedir="tmp" />
+
+        <!-- And delete the build dir -->
+        <delete dir="tmp" />
+    </target>
+
+    <target name="clean" description="clean up">
+        <delete dir="tmp" />
+        <delete dir="lib" />
+    </target>
+
+</project>

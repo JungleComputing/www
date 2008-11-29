@@ -1,0 +1,492 @@
+<hr>
+
+<h1>Student projects: Ibis and more</h1>
+<p>
+This page contains available projects for VU students, as currently
+offered by the group of prof. Henri Bal and Dr. Thilo Kielmann.
+As many of our activities have to do with the Ibis project, this page
+is located here. Nevertheless, also other topics (from the area of
+high-performance distributed computing) can be found here.
+Please check out the category of project you are interested in:
+</p>
+<ul>
+<li> <a href="#msc">Master projects</a>
+<li> <a href="#bsc">Bachelor projects</a>
+<li> <a href="#lit">Literature studies</a>
+<li> <a href="#ipa">Individual programming assignments</a>
+</ul>
+
+
+<h2><a name="msc">Master Projects</a></h2>
+
+<p>
+For general information about Master projects,
+see the <a href="http://www.few.vu.nl/onderwijs/masters/cs/masterprojects.html">overview</a> page.
+</p>
+
+<p>
+As prerequisite for our projects, you should have knowledge from one
+or two of the following courses:
+<ul>
+<li><a href="http://www.cs.vu.nl/~bal/college04.html">Parallel Programming</a></li>
+<li><a href="http://www.cs.vu.nl/cs/os-cn/networks-2004.html">Computer Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~graphics/">Computer Graphics</a></li>
+<li><a href="http://www.cs.vu.nl/obp/education/perfeval/">Performance Analysis of Communication Networks</a></li>
+<li><a href="http://www.cs.vu.nl/~kielmann/cgc/">Cluster and Grid Computing</a></li>
+</ul>
+</p>
+<p>
+As our work is mostly practically oriented, your programming skills should 
+at least be reasonable.
+</p>
+
+<h3>Open Topics</h3>
+
+<p>
+The following open topics are grouped by projects or topic area.
+The following, individual descriptions merely indicate topics; 
+the exact definition
+of a Master project will be negotiated with the individual student,
+to match interests and also the size of 36 ECTS credit points per project.
+For other types of projects (like an Individual Programming Assignment
+for PDCS students), size and orientation of a project can be varied.
+If you are interested in doing your thesis with us,
+please contact 
+<a href="http://www.cs.vu.nl/~reeuwijk/">dr.ir. Kees van Reeuwijk</a>, 
+unless stated otherwise with a particular topic.
+</p>
+
+<p>
+Here are shortcuts to general topics areas:
+</p>
+<ul>
+<li><a href="#m-ibis">Ibis</a>
+<li><a href="#m-saga">SAGA (and JavaGAT)</a>
+<li><a href="#m-graphics">Graphics</a>
+<li><a href="#m-misc">Miscellaneous</a>
+</ul>
+
+<h3><a name="m-ibis">Ibis: Efficient Java Based Grid Computing</a></h3>
+
+<p>
+<a href="http://www.cs.vu.nl/ibis">The Ibis project</a>
+is creating an efficient, Java-based platform for grid computing. The Ibis
+project currently consists of the IPL communication library, a variety
+of programming models, the Java Grid Application Toolkit (JavaGAT),
+and the Zorilla peer-to-peer grid middleware.  All components can be
+deployed on any grid platform, due to the use of Java.
+</p>
+
+
+<ul>
+<li><b>IPL over UDP</b></li>
+
+<p>
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
+communicating over the UDP protocol, avoiding the overheads caused by
+the commonly used TCP.
+</p>
+
+<li><b>IPL over Bluetooth</b></li>
+
+<p>
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
+communicating over the Bluetooth protocol, allowing efficient
+wireless communication.
+</p>
+
+
+<li><b>The Ibis Visualization Toolkit</b></li>
+
+<p>
+Ibis drastically simplifies the process of programming and deploying
+large-scale parallel and distributed applications. It does so by making
+transparent most of the underlying hardware and system complexities.
+</p>
+
+<p>
+Despite being useful, this high degree of transparency also has a drawback:
+when applications run slower than expected, or even crash, it is often
+difficult to find out the cause of the problem. Therefore it would be useful
+if Ibis application programmers and users would be presented with accurate
+information regarding the internal status of a running distributed application.
+</p>
+
+<p>
+In this project you will develop an Ibis visualization system, that provides
+Ibis programmers and users with insightful and up-to-date status information
+of running Ibis applications, and the resources they use. 
+</p>
+
+
+<li><b>The Multimedia PowerGrid</b></li>
+
+<p>
+The extraction of information (knowledge) from image and video data is a 
+challenging and computationally demanding task. To run image and video 
+processing applications on large-scale Grid systems, many inherent Grid 
+complexities need to be overcome. One major complexity is the problem of 
+system heterogeneity.
+</p>
+
+<p>
+Virtualization is a popular way of reducing the problem of the Grid's 
+heterogeneity. The technique has been applied in several application 
+environments (e.g. VMware, .NET) and programming languages (e.g. Java, 
+Perl, Python). From these, Java seems to have become the most widely 
+adopted. As Java has been shown to provide competitive performance in 
+comparison with C/C++, it seems a relevant language for implementing 
+large-scale image and video processing applications.
+</p>
+
+<p>
+In this project you will implement a small parallel image processing 
+library in Java and Ibis (on the basis of an existing library in C++ and 
+MPI). The functionality is to be applied in one or more parallel 
+image/video processing applications (several examples of which we have 
+available). The applications are to be run on a set of cluster systems, 
+potentially at a world-wide scale. The resulting system in Java is to be 
+evaluated by comparing the obtained results with the original C++/MPI 
+system.
+</p>
+
+<p>
+For more information, contact
+<a href="http://www.cs.vu.nl/~fjseins/">Dr. Frank J. Seinstra</a>.
+</p>
+
+<li><b>Awari in Ibis (challenging)</b></li>
+
+<p>
+Develop an Ibis program that computes all possible moves in the
+board game Awari.
+We have an existent and very efficient implementation in C++ plus
+assembly code for some `hotspots'. The challenge is to re-implement the
+program using the Ibis library. This would result in a much more portable
+and `grid-aware' program.
+</p>
+<p>
+However, since the original implementation used a number of machine-specific
+tricks to get a solution in a reasonable time, and since most of these
+tricks will not be feasible in the new environment,
+an entirely
+different solution strategy may be necessary. 
+</p>
+
+
+</ul>
+
+<h3><a name="m-saga">SAGA (and JavaGAT)</a></h3>
+<p>
+<a href="http://saga.cct.lsu.edu/">SAGA</a> is the Simple API for Grid 
+Applications, a standard we have developed within the Open Grid Forum
+<a href="http://www.ogf.org">(OGF)</a>. SAGA is supposed to be a successor
+of the Grid Application Toolkit (GAT) that is
+more focused to application needs.
+</p>
+<p>
+Our group has built a SAGA implementation in the Java language, using the
+JavaGAT as an underlying interface to middleware.
+In the context of the SAGA/JavaGAT combination, we have a few topics available.
+</p>
+
+<ul>
+<li><b>One SAGA for all</b></li>
+<p>
+So far, there exist two SAGA implementations, one in the Java language,
+and one in C++. Ideally, programs written in any programming language should
+be able to use SAGA's functionality. To come close to this goal, we propose
+to use the SAGA implementation in C++ and to turn it into a server process 
+that accepts calls from localhost using
+<a href="http://www.xmlrpc.com">XML-RPC</a> for which client implementations
+exist for many, many languages.
+</p>
+<p>Please contact
+<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.</p>
+
+<li><b>Adaptors for OGF's OGSA-based services</b></li>
+<p>
+Recently, implementations of the OGSA BES (basic execution service) and
+BYTE-IO have become available, such as 
+<a href="http://www.cs.virginia.edu/~vcgr/wiki/index.php/The_Genesis_II_Project">Genesis II</a> form the University of Virginia.
+Coupling Genesis II with SAGA (via the JavaGAT)
+would provide an important evaluation of OGF standards.
+</p>
+<p>Please contact
+<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.</p>
+
+<li><b>Adaptors for Condor</b></li>
+<p>
+<a href="http://www.cs.wisc.edu/condor/">Condor</a> is a widely used 
+middleware to submit computational jobs to, focusing on high-throughput 
+computing.
+Coupling Condor with SAGA (via the JavaGAT)
+would provide an important extension of the SAGA/JavaGAT scope.
+</p>
+<p>Please contact 
+<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.</p>
+
+<li><b>Amazon Cloud Adaptors</b></li>
+<p>Cloud computing is a new way of acquiring resources for applications. It is somewhat of a mixture of grids and traditional hosting services: Machines are "rented" on demand by a user, for a fixed price per hour. These machines can then be used for whatever the user wants (usually hosting websites)</p>
+
+<p>Amazon offers a cloud-computing infrastructure called <a href="http://aws.amazon.com/">Amazon Web Services</a>. Services include the Amazon elastic compute cloud(EC2) for acquiring machines, as well as the Amazon Simple Storage Service (S3) for storing files. We have done some initial experiments, showing this infrastructure can be used to run applications made with software in the Ibis project.</p>
+
+<p>The central research question of this project: is the amazon cloud useful
+as a platform for high performance parallel applications? Implement adaptors
+for the Amazon cloud services, specifically adaptors for both EC2 and S3. Also
+investigate the possibility of implementing adaptors to other services such as
+SimpleDB and Simple Queue Service (SQS). Using these adaptors, investigate the
+performance of the Amazon cloud, including network and processor speed, and application performance for a number of (existing) ibis applications.</p>
+
+<p>Please contact 
+<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.</p>
+
+
+
+</ul>
+
+<h3><a name="m-graphics">Graphics</a></h3>
+
+Occasionally, there are subjects available related to computer graphics,
+also in combination with Amsterdam-based companies. If you are interested,
+please contact 
+<a href="http://www.cs.vu.nl/~kielmann/">Thilo Kielmann</a>.
+
+<h3><a name="m-misc">Miscellaneous</a></h3>
+
+<ul>
+<li><b>Grid implementation of the coordination language Reo</b></li>
+
+<p>
+The IPL communication library was designed to be usable on multiple
+different network substrates. Add a new IPL implementation capable of
+communicating over the UDP protocol, avoiding the overheads caused by
+the commonly used TCP.
+</p>
+
+<p>
+The coordination language Reo offers a model of concurrency where
+interaction constitutes the only first-class concept.
+</p>
+
+<p>
+In the connector calculus that underlies Reo, every connector denotes
+a concrete interaction (protocol). Simple composition rules in Reo
+allow construction of arbitrarily complex protocols out of a handful
+of primitive protocols embodied in connectors, called channels. A
+concurrent application in Reo consists of a number of active entities
+(threads or processes) that anonymously communicate with each other
+through connectors. Reo enforces a strict separation of communication
+and computation, which makes the semantics of a connector independent of
+the semantics of the active entities that it interconnects. This supports
+scalable compositional construction of massively concurrent systems.
+Reo derives its high expressiveness from its unique feature of allowing
+arbitrary combination of exclusion, synchrony, and asynchrony in a single
+coherent compositional model. The semantics of Reo exists in various
+formal models, each serving a different purpose, e.g., correctness
+proofs, reasoning about various properties of connectors, model checking,
+(centralized and distributed) implementation, etc.
+</p>
+
+<p>
+The goal of this project is to use Reo connectors to compose and
+coordinate Grid services, using the IPL. The scheme involves creating a
+local Java thread as a proxy for each remote Grid service.  Creation of
+these proxies must be as mechanical and automated as possible, given
+the formal definitions of their interfaces and behavior.  Communication
+between a proxy and its corresponding Grid service will use the IPL
+library.  Formal parameters of types inPort and outPort objects that
+support get and put operations provide the only means of communication
+between a proxy and Reo connectors.
+</p>
+
+<p>
+To generate executable code from graphical specification of Reo circuits,
+we use constraint automata as an intermediary representation. Algorithms
+exist to compositionally derive the constraint automaton of a Reo circuit
+from the constraint automata of its constituent channels. Programs
+also exist to automate this process and to generate Java code from
+the resulting automata.  These tools exist as plug-ins in the Eclipse
+environment. The focus of this project is to devise effective schemes
+for construction of local-thread proxies for Grid services using the IPL,
+and the necessary Eclipse tools and plug-ins to semi-automate their
+generation integration with Reo.
+</p>
+
+<p>
+Implement the multi-threaded shared-memory version of Reo on top IPL,
+giving a working but probably far-for-efficient distributed implementation
+of Reo.
+</p>
+
+
+<li><b>High-Performance Multimedia Computing on GPUs</b></li>
+
+<p>
+The extraction of information (knowledge) from image and video data is a
+challenging and computationally demanding task. Given the inherently regular
+nature of many image processing algorithms, the use of GPUs (e.g. NVIDIA) is
+known to be very beneficial.
+
+In this project you will implement a small parallel image processing library
+for GPUs, using CUDA. The functionality is to be applied in one or more
+parallel image/video processing applications. The resulting system is to be
+evaluated by comparing the obtained results with an existing library in
+C++/MPI system (and possibly also with preliminary results obtained on the
+CELL/BE). 
+</p>
+
+<p>
+For more information, contact
+<a href="http://www.cs.vu.nl/~fjseins/">Dr. Frank J. Seinstra</a>.
+</p>
+
+
+
+<li><b>Intelligent Hardware Selection for Multimedia Applications (challenging)</b></li>
+
+<p>
+The extraction of information (knowledge) from image and video data is a
+challenging and computationally demanding task. Given the inherently regular
+nature of many of the commonly used image processing algorithms (e.g.
+filtering), the use of multicore processors and hardware accelerators, such
+as MPSoCs (e.g. CELL/BE) and GPUs (e.g. NVIDIA), is known to be beneficial.
+</p>
+
+<p>
+In this project you will design a system that can automatically select the
+'best' (e.g. fastest) hardware to run on for a given image/video processing
+application.
+</p>
+
+<p>
+For more information, contact
+<a href="http://www.cs.vu.nl/~fjseins/">Dr. Frank J. Seinstra</a>.
+</p>
+
+
+<li><b>Optimal code generation (challenging)</b></li>
+
+<p>
+Develop a program that generates for a small code fragment the <em>optimal</em>
+code sequence, by doing an exhaustive search. <b>Note:</b> this project requires
+some literature study,
+and may not even be feasible in the current form.
+</p>
+</ul>
+
+<hr>
+
+<h2><a name="bsc">Bachelor Projects</a></h2>
+
+<p>
+See the <a href="http://www.few.vu.nl/onderwijs/bachelors/inf/bachelorproject.html">overview</a> for general information.
+We can generally come up with assignments that explore certain aspects
+of grid computing or related subjects.
+This means that your thesis would not just be written for getting 
+the grade and immediate disposal in the trash...
+
+<h4>Open Topics</h4>
+
+There are currently no open topics, but that doesn't
+mean we can't give you a projects.  Please contact <a
+href="http://www.cs.vu.nl/~reeuwijk/">Kees van Reeuwijk</a> for more
+information.
+
+<hr>
+
+<h2><a name="lit">Literature Studies</a></h2>
+
+<p>
+Within the Computer Systems section, literature studies and their examination
+are organized by 
+<a href="http://www.cs.vu.nl/~crispo/teaching/literature_study.html">
+Bruno Crispo</a>.
+
+<p>
+
+Available topics:
+<ul>
+<li><strong>Computational Photography</strong> (advisor: Thilo Kielmann)<br>
+The rapidly-developing field of computational photography could revolutionize the use of digital cameras by providing software for manipulating images in nearly unlimited ways. For example, one software program can merge multiple camera shots to replace a bad facial expression in a group photo. Another program can combine pictures taken with and without a flash to illuminate people's faces while still providing a good image of a night-time background, and another program can create crystal-clear details by shifting the focus of the image after the picture has been taken. Meanwhile, Stanford University researchers are developing Frankencamera, an open source digital camera that enables users to add and remove features as easily as adding and removing LEGO parts. "With hardware and software and algorithms, there's just no end to what we can do with cameras and computational photography," says Stanford professor Marc Levoy. "I think it's going to be very exciting." ACM's annual Special Interest Group on Graphics and Interactive Techniques (SIGGRAPH) conference has provided a big boost to the development of computational photography. At this year's conference, researchers at MIT's Computer Science and Artificial Intelligence Lab introduced a technique called motion-invariant photography, which can be used to remove the blur from pictures of moving objects. The method currently works well on horizontal blurs and the researchers are working on extending its capabilities to two dimensions. Another feature in development, digital refocusing, enables a photographer to refocus a picture after it is taken in case the wrong subject was the main focus of the picture.
+See also: <a href="http://www.msnbc.msn.com/id/27585300/">popular article</a>,
+and <a href="http://www-graphics.stanford.edu/~levoy/publications.html">research site</a>
+<li>
+For other topics, please refer to
+<a href="http://www.cs.vu.nl/~reeuwijk/">Kees van Reeuwijk</a>.
+
+</ul>
+</p>
+
+<hr>
+
+<h2><a name="ipa">Individual programming assignments</a></h2>
+
+<p>
+Some smaller or non-scientific projects, suitable, for example, for
+an Individual Programming Assignment for PDCS students.
+</p>
+
+
+<ul>
+<li><b>Shared memory for grid applications (C++ && C)</b></li>
+
+The Simple API for Grid Applications (SAGA) is an open standard that
+defines a high-level, object-oriented interface to grid functionality
+(e.g. job submission, file access etc.) SAGA is used in the XtreemOS
+project, which aims to develop a linux-based operating system
+specifically designed for grids. A subproject within XtreemOS is the
+Object Sharing Service (OSS), a C-library that provides shared memory
+with various consistency models to distributed applications.
+
+In this IPA, you will add the functionality of OSS to the C++ reference
+implementation of SAGA. The end goal is to have an object-oriented
+interface to distributed shared memory, which will be added to the
+XtreemOS distribution.
+
+More information:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SAGA">SAGA</a>
+<li><a href="http://saga.cct.lsu.edu/">SAGA home page</a>
+<li><a href="http://www.xtreemos.eu/">XtreemOS</a>
+</ul>
+
+<li><b>Job submission in XtreemOS (Java)</b></li>
+
+The Simple API for Grid Applications (SAGA) is an open standard that
+defines a high-level, object-oriented interface to grid functionality
+(e.g. job submission, file access etc.). SAGA interacts with different
+kinds of middleware using plugins called 'adaptors'. SAGA is used in the
+XtreemOS project, which aims to develop a linux-based operating system
+specifically designed for grids. Among other things, XtreemOS provides
+its own job submission system.
+
+In this IPA, you will implement a job adaptor for the Java
+implementation of SAGA that interacts with the job submission system of
+XtreemOS. The end goal is to be able to submit jobs to XtreemOS nodes
+from a Java application using SAGA.
+
+More information:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SAGA">SAGA</a>
+<li><a href="http://saga.cct.lsu.edu/">SAGA home page</a>
+<li><a href="http://www.xtreemos.eu/">XtreemOS</a>
+</ul>
+
+<li><b>JavaGAT SRB adaptor</b></li>
+
+The JavaGAT is currently somewhat low on storage adaptors. An adaptor
+for the 
+<a href="http://www.sdsc.edu/srb/index.php/Main_Page">
+Storage Resource Broker(SRB)</a> 
+system would help to fill this gap.
+
+Quote from the SRB website:
+"The Storage Resource Broker (SRB) is a Data Grid Management System
+(DGMS) or simply a logical distributed file system based on a
+client-server architecture which presents the user with a single global
+logical namespace or file hierarchy."
+
+</ul>

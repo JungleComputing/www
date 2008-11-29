@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+    <head>
+
+	<link href="style.css" type="text/css" rel="StyleSheet"> 
+
+	<script type="text/javascript" src="generate_address.js">
+	</script>
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<title>Ibis: Grids As Promised</title>
+    </head>
+
+    <body>
+
+	<!-- MAIN TABLE -->
+
+	<table class="main">
+
+	    <!-- HEADER -->
+
+	    <tr>
+		<td class="main" align="left">
+		    <a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
+		</td>
+		<td class="main" align="center">
+		</td>
+		<td class="main" align="right">
+		    <a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
+		</td>
+	    </tr>
+
+	    <!-- TOP MENU -->
+
+	    <tr>
+		<td class="main" colspan=3>
+		    <div class="topmenu">
+			<!--			<?php include ("menus/top-menu-index.html"); ?> -->
+			<table class="topmenu" frame=void rules=none>
+			    <tr>
+				<td class="topmenu"><a class="topmenu" href="index.html">Home</a></td>
+				<td class="topmenu topmenu_active"><a class="topmenu topmenu_active" href="projects.html">Projects</a></td>
+				<td class="topmenu"><a class="topmenu" href="downloads.html">Downloads</a></td>
+				<td class="topmenu"><a class="topmenu" href="publications.html">Publications</a></td>
+				<td class="topmenu"><a class="topmenu" href="awards.html">Awards</a></td>
+				<td class="topmenu"><a class="topmenu" href="users.html">Users</a></td>
+				<td class="topmenu"><a class="topmenu" href="news.html">News</a></td>
+				<td class="topmenu"><a class="topmenu" href="contact.html">Contact</a></td>
+			    </tr>
+			</table>
+		    </div>
+		</td>
+	    </tr>
+
+	    <!-- MENU AND BANNER -->
+
+	    <tr>
+
+		<td class="main" id="menu_cell" rowspan=2>
+		    <div class="menu">
+			<table class="menu">
+			    <tr><td class="menu">
+				    <a href="menu.html#gmi2.1" class="menu menu_active level1">Overview</a>
+
+			    <tr><td class="menu">
+				    <a href="menu.html#gmi2.1" class="menu level1">Middleware</a>
+			    </td></tr>
+			    <tr><td class="menu">
+				    <a href="menu.html#gmi2.1" class="menu level2">JavaGAT</a>
+			    </td></tr>
+			    <tr><td class="menu">
+				    <a href="menu.html#gmi2.1" class="menu level2">Zorilla</a>
+			    </td></tr>
+			</table>
+		</div>
+	    </td>
+
+		<td class="main" colspan=2>
+		    <img src="images/projects-banner.png" alt="Banner">
+		</td>
+	</tr>
+	<tr>
+
+	    <!-- CONTENT -->
+
+		<td class="main">
+		    <?php include ("content/projects.html"); ?> 
+		</td>
+	    </tr>
+
+	    <!-- FOOTER -->
+
+	</table>
+    </body>
+</html>

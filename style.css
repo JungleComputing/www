@@ -1,104 +1,211 @@
-body {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; background-color: #FFFFFF }
-table, th, td {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px}
+body {
+    background-color: #0055A5 ; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #003B73;
+}
+
+a {
+    color: #1966AE;
+    text-decoration: underline;
+}
+
+
+a:hover {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
 img { border: none }
-a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #0066FF}
-a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #6689CC}
-a:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #02236A}
-a:active {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #0033FF}
-p  {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 18px} 
-li {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; line-height: 18px}
-dd {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 18px} 
-dt {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 18px; font-weight: bold} 
-h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 24px; color: #6689CC; font-weight: bold}
-h2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; color: #6689CC}
-h3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #6689CC}
-h4 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #333366}
-h5 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #000000 }
-h6 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000 }
-ul, ol {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; line-height: 18px }
-address  {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000000; font-size: 12px; line-height: 18px} 
 
-#menucell { 
-	background-image: url('images/sidebar-web.png') ; 
-	background-repeat: repeat-x ; 
-	background-position: top left ; 
-	vertical-align: top ;  
-	background-color: #6689CC ; 
-	width: 130px ;
+img.centered {
+    align: center;
 }
 
-#newscell { 
-	width: 140px ; 
-	vertical-align: top;
+/* MAIN TABLE */
+
+table.main {
+    width: 975px ;
+    background-color: #FFFFFF ; 
+    /*    border: thin dotted rgb(250,0,255) ; */
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
-#contentcell {
-	vertical-align: top;
+td.main {
+    /*    border: thin dotted rgb(250,0,255) ; */
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:2px;
+    padding-right:2px;
 }
 
-a.button {
-        background-color: #6689CC ;
-	display: block;
-	font-weight: bold;
-	font-size: 11px;
-	text-align: center;
-	text-decoration: none;
-	margin: 1px auto;
-	color: white;
-}
+/* TOP MENU */
 
-.projectclass {
-	display: block;
-	font-weight: bold;
-	font-size: 11px;
-	text-align: center;
-	text-decoration: none;
-	margin: 10px auto;
-	color: black;
-}
-
-a.logo {
-	display: block;
-	text-align: center;
-	margin: 25px auto;
-}
-
-h2.news {
-	text-align: center;
-}
-
-p.news {
-        border: dotted #CC9900;
-	border-width: thin;
-	font-size: 11px;
-	background-color: #FFFF66;
-
-	display: block;
-	text-decoration: none;
-	margin: 5px auto;
+div.topmenu {
+    background-color: #1966AE;
+    color: white;
+    width: 950px;
 }
 
 table.topmenu {
-	border-spacing: 0px 0px;
-	width: 95%;
+    padding: 0px;
+    margin: 0px 15px 0px 15px;
+    border: 0;
 }
 
 td.topmenu {
-	width: 15%;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
 }
 
-a.topmenu {
-	display: block;
-        background-color: #6689CC ;
-	font-weight: bold;
-	font-size: 11px;
-	text-align: center;
-	text-decoration: none;
-	color: white;
-	width: 100%; 
+td.topmenu:hover {
+     color: #1966AE;
+     background-color: white;
+
+}
+
+td.topmenu_active {
+}
+
+/* NEWS  */
+
+
+#news_cell {
+    vertical-align: top;
+}
+
+table.news {
+    width: 200px;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+tr.news {
+	  }
+
+th.news {
+    font-weight: bold;
+    vertical-align: middle;
+    padding:  0 0 0 10px  ;
+    margin:  0 0 0 0px  ;
+    height: 23px;
+    color: #003B73;
+    background-color: #E5EEF6;
 }
 
 
+td.news {
+    border-bottom: 1px solid #99BBDB;
+    padding: 7px 10px 7px 10px;
+}
+
+a.news {
+    color:#003B73;
+    text-decoration: none;
+}
+
+a.news:hover {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+/*
+
+table.news {
+    overflow:hidden;
+    padding:0px;
+    margin:0px;
+    font-size:1.1em;
+    width:185px;
+}
+
+div.news_header {
+    background-color: #E5EEF6;
+    width:185px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+h4.news {
+    font-weight: bold;
+    vertical-align: middle;
+    padding-left: 10px ;
+    border: thin dotted rgb(250,0,255) ;
+    height: 25px;
+
+}
+
+li.news {
+    clear:both;
+    cursor:pointer;
+    display:block;
+    line-height:15px;
+    margin:0px;
+    padding:0px;
+    border-bottom: 1px solid #DFDFDF;
+
+}
+
+a.news {
+    color:#003B73;
+    display:block;
+    font-family:Arial;
+    margin:0px;
+    padding:0px 15px 0px 0px;
+}
+
+*/
 
 
+/* MENU */
+
+ul.menu {
+    overflow:hidden;
+    padding:0px;
+    margin:0px;
+    font-size:1.1em;
+    width:185px;
+}
+
+li.menu {
+    clear:both;
+    cursor:pointer;
+    display:block;
+    line-height:15px;
+    margin:0px;
+    padding:0px;
+}
+
+ul.menu {
+    padding-left:0px;
+    margin-left:0px;
+}
+
+a.menu {
+    color:#003B73;
+    display:block;
+    font-family:Arial;
+    margin:0px;
+    padding:0px 15px 0px 0px;
+}
+
+a.menu-active {
+    color: #c00;
+}
 

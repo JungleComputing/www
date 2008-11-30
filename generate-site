@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo Generating html with ibis-website-generator...
+echo
+
+java -cp generator/lib/*.jar ibis.www.generator.Generator generator/menu.properties generator/header.html generator/footer.html
+
+echo
+echo Generating papers and talks content from bibtex files...
+echo
+
+for CATEGORY in javagat satin mpj gmi zorilla ibis smartsockets other
+do
+    echo Generating papers and talks for $CATEGORY
+    if [ -f papers/$CATEGORY.bib ]
+    then
+	bibtex2html -nokeys -nofooter -nodoc -d -r -q -o generated/papers_$CATEGORY papers/$CATEGORY.bib
+    else
+	echo "Warning: papers/$CATEGORY.bib is missing" 1>&2
+    fi
+
+    if [ -f talks/$CATEGORY.bib ]
+    then
+	bibtex2html -nokeys -nofooter -nodoc -nf ppt ".ppt" -d -r -q -o generated/talks_$CATEGORY talks/$CATEGORY.bib
+    else
+	echo "Warning: talks/$CATEGORY.bib is missing" 1>&2
+    fi
+done

@@ -1,75 +1,90 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <html>
-    <head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
-	<link href="style.css" type="text/css" rel="StyleSheet"> 
+<link href="style.css" type="text/css" rel="StyleSheet"> 
 
-	<script type="text/javascript" src="generate_address.js">
-	</script>
+<script type="text/javascript" src="generate_address.js">
+</script>
 
-	<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
 
-	<title>Ibis: Grids As Promised</title>
-    </head>
+<title>Ibis: Grids As Promised</title>
+</head>
 
-    <body>
+<body>
 
-	<!-- MAIN TABLE -->
+<!-- MAIN TABLE -->
 
-	<table class="main">
+<table class="main">
 
-	    <!-- HEADER -->
+<!-- HEADER -->
 
-	    <tr>
-		<td class="main" align="left">
-		    <a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
-		</td>
-		<td class="main" align="right">
-		    <a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
-		</td>
-	    </tr>
+<tr>
+    <td class="main" id="ibis_logo_cell" align="left">
+	<a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
+    </td>
 
-	    <!-- TOP MENU -->
+    <td class="main" id="vu_logo_cell" align="right">
+	<a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
+    </td>
+</tr>
 
-	    <tr>
-		<td class="main" colspan=2>
-		    <div class="topmenu">
-			<!--			<?php include ("menus/top-menu-index.html"); ?> -->
-			<table class="topmenu" frame=void rules=none>
-			    <tr>
-				<td class="topmenu topmenu_active"><a class="topmenu topmenu_active" href="index.html">Home</a></td>
-				<td class="topmenu"><a class="topmenu" href="projects.html">Projects</a></td>
-				<td class="topmenu"><a class="topmenu" href="downloads.html">Downloads</a></td>
-				<td class="topmenu"><a class="topmenu" href="publications.html">Publications</a></td>
-				<td class="topmenu"><a class="topmenu" href="awards.html">Awards</a></td>
-				<td class="topmenu"><a class="topmenu" href="users.html">Users</a></td>
-				<td class="topmenu"><a class="topmenu" href="news.html">News</a></td>
-				<td class="topmenu"><a class="topmenu" href="contact.html">Contact</a></td>
-			    </tr>
-			</table>
-		    </div>
-		</td>
-	    </tr>
+<!-- TOP MENU -->
 
-	    <!-- BANNER & NEWS -->
+<tr>
+    <td class=main colspan=2>
+    <div class=topmenu>
+    <table class=topmenu>
+    <tr>
+        <td class="topmenu topmenu_active">
+            <a class="topmenu topmenu_active" href="index.html">Home</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="projects.html">Projects</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="downloads.html">Downloads</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="papers.html">Publications</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="awards.html">Awards</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="users.html">Users</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="news.html">News</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="contact.html">Contact</a>
+        </td>
+    </tr>
+    </table>
+    </div>
+    </td>
+</tr>
 
-	    <tr>
-		<td class=main>
-		    <!-- CONTENT -->
-		    <?php include ("content/index.html"); ?> 
-		</td>
+<tr>
+    <!-- CONTENT -->
+    <td class=main id=content_cell>
+        <?php include ("content/index.html"); ?>
+    </td>
+    <!-- NEWS BOX -->
+    <td class=main>
+        <table class=news>
+            <tr class=news><th class=news>What's new?</th></tr>
+            <?php include ("content/news-summary.html"); ?>
+        </table>
+    </td>
+</tr>
 
-		<td class=main>
-			<table class=news>
-			    <tr class=news><th class=news>What's new?</th></tr>
-			    <?php include ("content/news-summary.html"); ?> 
-			</table>
-		</td>
-	    </tr>
+<!-- FOOTER -->
 
-	    <!-- FOOTER -->
-
-	</table>
-    </body>
+</table>
+</body>
 </html>

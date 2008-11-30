@@ -10,11 +10,14 @@ h1, h2, h3, h4, h5 {
     color: #003B73;
 }
 
+#content_cell {
+    width: 775px;
+}
+
 a {
     color: #1966AE;
     text-decoration: underline;
 }
-
 
 a:hover {
     color: #CC0000;
@@ -44,7 +47,7 @@ table.main {
 }
 
 td.main {
-    border: thin dotted rgb(250,0,255) ;
+    /* border: thin dotted rgb(250,0,255) ; */
     padding-top:3px;
     padding-bottom:3px;
     padding-left:3px;

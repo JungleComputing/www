@@ -1,95 +1,160 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <html>
-    <head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
-	<link href="style.css" type="text/css" rel="StyleSheet"> 
+<link href="style.css" type="text/css" rel="StyleSheet"> 
 
-	<script type="text/javascript" src="generate_address.js">
-	</script>
+<script type="text/javascript" src="generate_address.js">
+</script>
 
-	<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
 
-	<title>Ibis: Grids As Promised</title>
-    </head>
+<title>Ibis: Grids As Promised</title>
+</head>
 
-    <body>
+<body>
 
-	<!-- MAIN TABLE -->
+<!-- MAIN TABLE -->
 
-	<table class="main">
+<table class="main">
 
-	    <!-- HEADER -->
+<!-- HEADER -->
 
-	    <tr>
-		<td class="main" align="left">
-		    <a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
-		</td>
-		<td class="main" align="right">
-		    <a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
-		</td>
-	    </tr>
+<tr>
+    <td class="main" id="ibis_logo_cell" align="left">
+	<a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
+    </td>
 
-	    <!-- TOP MENU -->
+    <td class="main" id="vu_logo_cell" align="right">
+	<a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
+    </td>
+</tr>
 
-	    <tr>
-		<td class="main" colspan=2>
-		    <div class="topmenu">
-			<!--			<?php include ("menus/top-menu-index.html"); ?> -->
-			<table class="topmenu" frame=void rules=none>
-			    <tr>
-				<td class="topmenu"><a class="topmenu" href="index.html">Home</a></td>
-				<td class="topmenu topmenu_active"><a class="topmenu topmenu_active" href="projects.html">Projects</a></td>
-				<td class="topmenu"><a class="topmenu" href="downloads.html">Downloads</a></td>
-				<td class="topmenu"><a class="topmenu" href="publications.html">Publications</a></td>
-				<td class="topmenu"><a class="topmenu" href="awards.html">Awards</a></td>
-				<td class="topmenu"><a class="topmenu" href="users.html">Users</a></td>
-				<td class="topmenu"><a class="topmenu" href="news.html">News</a></td>
-				<td class="topmenu"><a class="topmenu" href="contact.html">Contact</a></td>
-			    </tr>
-			</table>
-		    </div>
-		</td>
-	    </tr>
+<!-- TOP MENU -->
 
-	    <!-- MENU AND BANNER -->
+<tr>
+    <td class=main colspan=2>
+    <div class=topmenu>
+    <table class=topmenu>
+    <tr>
+        <td class=topmenu>
+            <a class=topmenu href="index.html">Home</a>
+        </td>
+        <td class="topmenu topmenu_active">
+            <a class="topmenu topmenu_active" href="projects.html">Projects</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="downloads.html">Downloads</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="papers.html">Publications</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="awards.html">Awards</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="users.html">Users</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="news.html">News</a>
+        </td>
+        <td class=topmenu>
+            <a class=topmenu href="contact.html">Contact</a>
+        </td>
+    </tr>
+    </table>
+    </div>
+    </td>
+</tr>
 
-	    <tr>
-		<td class="main">
-			<table class="menu">
-			    <tr>
-				<td class="menu">
-				    <a href="menu.html#gmi2.1" class="menu menu_active level0">Overview</a>
-				</td>
-			    </tr>
+<tr>
+<!-- SUB MENU -->
 
-			    <tr>
-				<td class="menu">
-				    <a href="menu.html#gmi2.1" class="menu level0">Middleware</a>
-				</td>
-			    </tr>
-			    <tr>
-				<td class="menu">
-				    <a href="menu.html#gmi2.1" class="menu level1">JavaGAT</a>
-				</td>
-			    </tr>
-			    <tr>
-				<td class="menu">
-				    <a href="menu.html#gmi2.1" class="menu level1">Zorilla</a>
-				</td>
-			    </tr>
-			</table>
-		</td>
+    <td class=main>
+        <table class=menu>
+            <tr>
+                <td class=menu>
+                    <a href="projects.html" class="menu menu_active level0">Overview</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="middleware.html" class="menu level0">Middleware</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="javagat.html" class="menu level1">JavaGAT</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="zorilla.html" class="menu level1">Zorilla</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="commlibs.html" class="menu level0">Communication Libraries</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="ipl.html" class="menu level1">IPL</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="smartsockets.html" class="menu level1">Smartsockets</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="prog-models.html" class="menu level0">Programming Models</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="satin.html" class="menu level1">Satin</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="mpj.html" class="menu level1">MPJ</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="gmi.html" class="menu level1">GMI</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="rmi.html" class="menu level1">Ibis RMI</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="applications.html" class="menu level0">Applications</a>
+                </td>
+            </tr>
+            <tr>
+                <td class=menu>
+                    <a href="sat4satin.html" class="menu level1">SAT4Satin</a>
+                </td>
+            </tr>
+        </table>
+    </td>
 
-		<!-- CONTENT -->
+    <!-- CONTENT -->
+    <td class=main id=content_cell>
+        <?php include ("content/projects.html"); ?>
+    </td>
+</tr>
 
-		<td class="main">
-		    <?php include ("content/projects.html"); ?> 
-		</td>
-	    </tr>
+<!-- FOOTER -->
 
-	    <!-- FOOTER -->
-
-	</table>
-    </body>
+</table>
+</body>
 </html>

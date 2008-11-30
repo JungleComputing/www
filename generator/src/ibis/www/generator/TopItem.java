@@ -43,9 +43,12 @@ class TopItem {
         }
     }
 
-    // name of item
+    /**
+     * @return name of this item. Also converts name to include spaces instead
+     *         of underscores.
+     */
     String getName() {
-        return name;
+        return name.replace('_', ' ');
     }
 
     // target of link in top menu
@@ -54,7 +57,7 @@ class TopItem {
             return pageFilename;
         } else {
             // first item in menu
-            return children[0].getPageFilename();
+            return children[0].getTarget();
         }
     }
 

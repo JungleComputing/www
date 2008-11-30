@@ -36,22 +36,23 @@ class SubItem {
     }
 
     /**
-     * @return name of this item
+     * @return name of this item. Also converts name to include spaces instead
+     *         of underscores.
      */
-    public String name() {
-        return name;
+    public String getName() {
+        return name.replace('_', ' ');
     }
 
     /**
      * @return target of this item
      */
-    public String getPageFilename() {
+    public String getTarget() {
         return pageFilename;
     }
 
     // first create own page, then children
-    void generatePages(Generator generator, TopItem topItem, int topItemIndex, int[] indexes)
-            throws Exception {
+    void generatePages(Generator generator, TopItem topItem, int topItemIndex,
+            int[] indexes) throws Exception {
         System.err.println("Creating page: " + pageFilename);
 
         PrintStream out = new PrintStream(pageFilename);
@@ -81,48 +82,51 @@ class SubItem {
             }
             childIndexes[indexes.length] = child;
 
-            children[child].generatePages(generator, topItem, topItemIndex, childIndexes);
+            children[child].generatePages(generator, topItem, topItemIndex,
+                    childIndexes);
         }
     }
 
-    //write this non-active item and its children (not active too)
+    // write this non-active item and its children (not active too)
     void writeSubMenuPassiveItems(PrintStream out, int level) {
         out.println("            <tr>");
         out.println("                <td class=menu>");
-        out.println("                    <a href=\"" + pageFilename + "\" class=\"menu level" + level + "\">" + name + "</a>");
+        out.println("                    <a href=\"" + getTarget()
+                + "\" class=\"menu level" + level + "\">" + getName() + "</a>");
         out.println("                </td>");
         out.println("            </tr>");
-        
-        for(SubItem child: children) {
+
+        for (SubItem child : children) {
             child.writeSubMenuPassiveItems(out, level + 1);
         }
     }
-    
-    //write this active item and its children (some of which may be active too)
+
+    // write this active item and its children (some of which may be active too)
     void writeSubMenuActiveItems(PrintStream out, int[] activeItems, int level) {
         out.println("            <tr>");
         out.println("                <td class=menu>");
-        out.println("                    <a href=\"" + pageFilename + "\" class=\"menu menu_active level" + level + "\">" + name + "</a>");
+        out.println("                    <a href=\"" + pageFilename
+                + "\" class=\"menu menu_active level" + level + "\">" + name
+                + "</a>");
         out.println("                </td>");
         out.println("            </tr>");
-        
-        for(int i = 0; i < children.length; i++) {
+
+        for (int i = 0; i < children.length; i++) {
             if (activeItems.length > 0 && i == activeItems[0]) {
-                //cut of first element of active items
+                // cut of first element of active items
                 int[] childActiveItems = new int[activeItems.length - 1];
                 for (int j = 0; j < childActiveItems.length; j++) {
                     childActiveItems[j] = activeItems[j + 1];
                 }
-                
-                children[i].writeSubMenuActiveItems(out, childActiveItems, level + 1);
-                
+
+                children[i].writeSubMenuActiveItems(out, childActiveItems,
+                        level + 1);
+
             }
-            
+
             children[i].writeSubMenuPassiveItems(out, level + 1);
         }
-        
-        
-    }
 
+    }
 
 }

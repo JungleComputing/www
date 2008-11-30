@@ -75,7 +75,10 @@ class SubItem {
 
         for (int child = 0; child < children.length; child++) {
             // add additional index to list
-            int[] childIndexes = Arrays.copyOf(indexes, indexes.length + 1);
+            int[] childIndexes = new int[indexes.length + 1];
+            for (int i = 0; i < indexes.length; i++) {
+                childIndexes[i] = indexes[i];
+            }
             childIndexes[indexes.length] = child;
 
             children[child].generatePages(generator, topItem, topItemIndex, childIndexes);

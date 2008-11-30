@@ -704,29 +704,4 @@ public class WebsiteProperties extends Properties {
         }
         return true;
     }
-
-    /**
-     * Finds a list of clusters, jobs or application in a list of properties
-     * 
-     * Each unique string in the set of keys(cut on the first ".") starting with
-     * the given prefix is returned, except for "default"
-     * 
-     * @param prefix
-     *            prefix to filter on
-     * 
-     * @return the set of elements
-     */
-    public List<String> getElementList(String prefix) {
-        List<String> result = new ArrayList<String>();
-
-        for (String key : stringPropertyNames()) {
-            if (key.startsWith(prefix)) {
-                key = key.substring(prefix.length());
-                // add part of key before the first period to the result
-                result.add(key.split("\\.")[0]);
-            }
-        }
-
-        return result;
-    }
 }

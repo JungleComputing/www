@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+    <head>
+
+	<link href="style.css" type="text/css" rel="StyleSheet"> 
+
+	<script type="text/javascript" src="generate_address.js">
+	</script>
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<title>Ibis: Grids As Promised</title>
+    </head>
+
+    <body>
+
+	<!-- MAIN TABLE -->
+
+	<table class="main">
+
+	    <!-- HEADER -->
+
+	    <tr>
+		<td class="main" align="left">
+		    <a href="index.html"><img src="images/ibis-logo.png" alt="Ibis logo" ></a>
+		</td>
+		<td class="main" align="right">
+		    <a href="http://www.vu.nl"><img src="images/vu-logo.png" alt="VU logo" ></a>
+		</td>
+	    </tr>
+
+	    <!-- TOP MENU -->
+
+	    <tr>
+		<td class="main" colspan=2>
+		    <div class="topmenu">
+			<!--			<?php include ("menus/top-menu-index.html"); ?> -->
+			<table class="topmenu" frame=void rules=none>
+			    <tr>
+				<td class="topmenu topmenu_active"><a class="topmenu topmenu_active" href="index.html">Home</a></td>
+				<td class="topmenu"><a class="topmenu" href="projects.html">Projects</a></td>
+				<td class="topmenu"><a class="topmenu" href="downloads.html">Downloads</a></td>
+				<td class="topmenu"><a class="topmenu" href="publications.html">Publications</a></td>
+				<td class="topmenu"><a class="topmenu" href="awards.html">Awards</a></td>
+				<td class="topmenu"><a class="topmenu" href="users.html">Users</a></td>
+				<td class="topmenu"><a class="topmenu" href="news.html">News</a></td>
+				<td class="topmenu"><a class="topmenu" href="contact.html">Contact</a></td>
+			    </tr>
+			</table>
+		    </div>
+		</td>
+	    </tr>
+
+	    <!-- BANNER & NEWS -->
+
+	    <tr>
+		<td class="main">
+		    <img src="images/balloons-text.png" alt="Banner">
+		    <!-- CONTENT -->
+		    <?php include ("content/index.html"); ?> 
+		</td>
+
+		<td class="main" id="news_cell" rowspan=2>
+		    <div class="news">
+			<table class="news">
+			    <tr class="news"><th class="news">What's new?</th></tr>
+			    <!-- <?php include ("content/news-summary.html"); ?> -->
+			    <tr><td class="news">
+				    <a href="news.html#gmi2.1" class="news">June 2008: Ibis GMI 2.1 is available now!</a>
+			    </td></tr>
+			    <tr><td class="news">
+				    <a href="news.html#gmi2.1" class="news">June 2008: Ibis GMI 2.1 is available now!</a>
+			    </td></tr>
+			    <tr><td class="news">
+				    <a href="news.html#gmi2.1" class="news">June 2008: Ibis GMI 2.1 is available now!</a>
+			    </td></tr>
+			</table>
+		</div>
+		</td>
+	    </tr>
+
+	    <!-- FOOTER -->
+
+	</table>
+    </body>
+</html>

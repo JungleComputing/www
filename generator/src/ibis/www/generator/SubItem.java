@@ -101,22 +101,34 @@ class SubItem {
         }
     }
 
-    // write this active item and its children (some of which may be active too)
-    void writeSubMenuActiveItems(PrintStream out, int[] activeItems, int level) {
-        out.println("            <tr>");
-        out.println("                <td class=menu>");
-        out.println("                    <a href=\"" + pageFilename
-                + "\" class=\"menu menu_active level" + level + "\">" + name
-                + "</a>");
-        out.println("                </td>");
-        out.println("            </tr>");
+    // write this sub menu (either it or one of its children is active)
+    void writeSubMenuActiveItems(PrintStream out, int[] activeItem, int level) {
+        if (activeItem.length == 0) {
+            // item is active
+            out.println("            <tr>");
+            out.println("                <td class=menu>");
+            out.println("                    <a href=\"" + pageFilename
+                    + "\" class=\"menu menu_active level" + level + "\">"
+                    + name + "</a>");
+            out.println("                </td>");
+            out.println("            </tr>");
+        } else {
+            // item is not active
+            out.println("            <tr>");
+            out.println("                <td class=menu>");
+            out.println("                    <a href=\"" + getTarget()
+                    + "\" class=\"menu level" + level + "\">" + getName()
+                    + "</a>");
+            out.println("                </td>");
+            out.println("            </tr>");
+        }
 
         for (int i = 0; i < children.length; i++) {
-            if (activeItems.length > 0 && i == activeItems[0]) {
+            if (activeItem.length > 0 && i == activeItem[0]) {
                 // cut of first element of active items
-                int[] childActiveItems = new int[activeItems.length - 1];
+                int[] childActiveItems = new int[activeItem.length - 1];
                 for (int j = 0; j < childActiveItems.length; j++) {
-                    childActiveItems[j] = activeItems[j + 1];
+                    childActiveItems[j] = activeItem[j + 1];
                 }
 
                 children[i].writeSubMenuActiveItems(out, childActiveItems,

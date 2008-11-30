@@ -122,9 +122,9 @@ class SubItem {
                 children[i].writeSubMenuActiveItems(out, childActiveItems,
                         level + 1);
 
+            } else {
+                children[i].writeSubMenuPassiveItems(out, level + 1);
             }
-
-            children[i].writeSubMenuPassiveItems(out, level + 1);
         }
 
     }

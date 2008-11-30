@@ -60,7 +60,7 @@ public class Generator {
 
     void writeContent(PrintStream out, String pageFileName) {
         out.println("    <!-- CONTENT -->");
-        out.println("    <td class=main>");
+        out.println("    <td class=main id=content_cell>");
         out.println("        <?php include (\"content/" + pageFileName
                 + "\"); ?>");
         out.println("    </td>");

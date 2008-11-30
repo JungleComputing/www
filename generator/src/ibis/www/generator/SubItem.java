@@ -109,7 +109,7 @@ class SubItem {
             out.println("                <td class=menu>");
             out.println("                    <a href=\"" + pageFilename
                     + "\" class=\"menu menu_active level" + level + "\">"
-                    + name + "</a>");
+                    + getName() + "</a>");
             out.println("                </td>");
             out.println("            </tr>");
         } else {

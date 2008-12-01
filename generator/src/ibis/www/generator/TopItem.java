@@ -111,7 +111,7 @@ class TopItem {
                 out.println("<!-- EMPTY SUB MENU -->");
                 out.println();
                 out.println("    <td class=main>");
-                out.println("        <table class=menu>");
+                out.println("        <img src=\"images/gradient.png\">");
                 out.println("        </table>");
                 out.println("    </td>");
 

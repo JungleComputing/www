@@ -1,19 +1,3 @@
-<table class=topmenu><tr> <td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/frs/?group_id=16">Download IPL</a></td>
-<td class=topmenu><a class=topmenu href="downloads/progman.pdf">Programmer's Manual</a></td>
-<td class=topmenu><a class=topmenu href="publications.html#ibis">IPL Publications</a></td>
-<td class=topmenu><script type="text/javascript"> generate_contact_address( "ibis", "cs.vu.nl" ); </script></td>
-</tr>
-</table>
-
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="javadoc/ipl/index.html">Javadoc</a></td>
-<td class=topmenu><a class=topmenu href="downloads/usersguide.pdf">User's Guide</a></td>
-<td class=topmenu><a class=topmenu href="talks.html#ibis">IPL Talks</a></td>
-<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=16">Report Bugs</a></td>
-</tr>
-</table>
-
-
 <h2>The Ibis Portability Layer (IPL)</h2>
 
 <p>The Ibis Portability layer (IPL) is a communication library is specifically
@@ -48,19 +32,17 @@ framework.</dd> </dl>
 
 <h3>System Overview</h3>
 
-<p>Ibis was designed to be used in a multi layer system. See the picture
-of the design below. On top of the system are the applications. These
-applications can use any of the programming models present in the Ibis project.
-The Ibis Portability Layer (IPL) acts as a common interface for the
-different programming models to the bottom implementation layer.
-Multiple implementations are available. Some, such as TcpIbis using 100%
-Java code to ensure portability, and some, such as the MPI based Ibis
-implementation taking advantage of local high speed networks using
-native code.</p>
+<img class=floating src="images/ibis-design.png" alt="ibis design">
 
-<p>
-<img src="images/ibis-design.png" height="436" width="600" alt="ibis design" >
-</p>
+<p>Ibis was designed to be used in a multi layer system.  On top of the system
+are the applications. These applications can use any of the programming models
+present in the Ibis project.  The Ibis Portability Layer (IPL) acts as a common
+interface for the different programming models to the bottom implementation
+layer.  Multiple implementations are available. Some, such as TcpIbis using
+100% Java code to ensure portability, and some, such as the MPI based Ibis
+implementation taking advantage of local high speed networks using native
+code.</p>
+
 
 <p>For more in depth information see the following resources:</p>
 

@@ -30,6 +30,11 @@ p.centered {
     text-align: center;
 }
 
+img.floating {
+    float: right ;
+    padding: 10px 10px 10px 10px ;
+}
+
 /* MAIN TABLE */
 
 table.main {
@@ -167,7 +172,8 @@ a.level1 {
 }
 
 a.level2 {
-    padding-left: 30px;
+    padding-left: 40px;
+    font-size: 80%;
 }
 
 a.menu_active {

@@ -1,36 +1,29 @@
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/projects/javagat/">Download JavaGAT</a></td>
-<td class=topmenu><a class=topmenu href="http://www.cs.vu.nl/~rob/JavaGAT-tutorial.pdf">Tutorial</a></td>
-<td class=topmenu><a class=topmenu href="http://projects.gforge.cs.vu.nl/ibis/javadoc/javagat/index.html">Javadoc</a></td>
-<td class=topmenu><a class=topmenu href="publications.html#javagat">JavaGAT Publications</a></td>
-</tr>
-</table>
-
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="talks.html#javagat">JavaGAT Talks</a></td>
-<td class=topmenu><script type="text/javascript"> generate_contact_address( "rkemp", "cs.vu.nl" ); </script></td>
-<td class=topmenu><a class=topmenu href="mailto:gat-devel@cct.lsu.edu">Mailinglist</a></td>
-<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=25">Report Bugs</a></td>
-</tr>
-</table>
-
 <h2>JavaGAT</h2>
-<p>Java Grid Application Toolkit (JavaGAT) offers a set of
+<img class=floating src="images/JavaGAT-small.png" alt="JavaGAT logo">
+<p>
+Java Grid Application Toolkit (JavaGAT) offers a set of
 coordinated, generic and flexible APIs for accessing grid services
 from application codes, portals, data managements systems, etc.</p>
 
 <p>JavaGAT sits between grid applications and numerous types of
 grid middleware, such as Globus, SGE, SSH or Zorilla. JavaGAT
 lifts the burden of grid application programmers by providing them
-with a uniform interface that provides file access, job submission,
-monitoring, and access to information services. As a result, grid
+with a uniform interface that provides:
+<ul>
+    <li>file operations (File, LogicalFile, RandomAccessFile, Endpoint)</li>
+    <li>file stream operations (FileInputStream, FileOutputStream)</li>
+    <li>job submission (ResourceBroker)</li>
+    <li>monitoring (Monitorable)</li>
+    <li>access to information services (AdvertService)</li>
+</ul>
+As a result, grid
 application programmers need only to learn a single API to obtain access
 to the entire grid. Due to its modular design, JavaGAT can easily
 be extended with support for other grid middleware layers.</p>
 
-<p>The structure of JavaGAT is shown in the picture below.</p>
+<p>The structure of JavaGAT is shown in the picture on the right.</p>
 
-<img src="images/gat-design.png">
+<img class=floating src="images/gat-design.png" alt="JavaGAT design overview">
 
 <p>
 The idea is that grid applications do not use grid middleware directly. Instead, the applications calls methods of the GAT API.
@@ -41,299 +34,13 @@ The GAT engine dynamically "routes" the API calls to the correct grid middleware
 The following table lists the adaptors that come with the standard JavaGAT distribution.
 All adaptors are implemented in java, and libraries that are needed are included in the distribution.
 JavaGAT does not rely on any pre installed external packages or libraries.
-<BR><BR>
-
-<table summary="adaptor table" width="100%" cellspacing="0" frame=border rules=all class="adaptors" >
-
-<tr>
-<th>Adaptor</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>Local File</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Local File Streams</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Local Random Access File</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Generic Logical File</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Pipe: Sockets</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Local Advert Serive</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Local Resource Broker (fork)</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Mercury Monitoring</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>GridLab File Adaptor</td>
-<td>done, no longer maintained</td>
-</tr>
-
-<tr>
-<td>GridLab Logical File Adaptor (StorageBox)</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>GridLab GRMS ResourceBroker</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Globus GRIDFTP File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>Globus GRIDFTP File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>Globus GRAM ResourceBroker Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>ProActive ResourceBroker Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>FTP File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>SSH File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>SSH FileStreams</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>SSH ResourceBroker</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>SFTP File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>SFTP FileStreams</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>FTP FileStreams</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>HTTP FileStreams</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>HTTPS FileStreams</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>Commandline SSH File Adaptor</td>
-<td>done</td>
-</tr>
-
-
-<tr>
-<td>Commandline SSH ResourceBroker</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Copying FileInputStream Adaptor</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>Prun Adaptor (for DAS use only)</td>
-<td>done</td>
-</tr>
-
-<tr>
-<td>PBS ResourceBroker</td>
-<td>coding</td>
-</tr>
-
-<tr>
-<td>Sun GridEngine (SGE) ResourceBroker</td>
-<td>coding</td>
-</tr>
-
-</table>
-
-<BR><BR>
-Several projects are using JavaGAT at this moment. 
-JavaGAT can be downloaded anonymously, so we really don't know who is using it.
-We are aware of some users, those are listed below. 
-In many cases we don't exactly know what JavaGAT is used for.
-If you want your name or project in this list, please send an email to rob@cs.vu.nl.
-<BR><BR>
-
-<table summary="JavaGAT users" width="100%" cellspacing="0" frame=border rules=all class="users" >
-
-<tr>
-<td>Project or Oranization</td>
-<td>Are using JavaGAT for</td>
-</tr>
-
-<tr>
-<td>Vrije Universiteit Amsterdam <a href="http://www.vu.nl">www.vu.nl</a></td>
-<td>JavaGAT is developped here. Several of our grid projects use it. 
-  We also use it for the Grid Computing course here, students have to write grid 
-  progams with the JavaGAT.</td>
-</tr>
-
-<tr>
-<td>The Dutch Virtual Labs for E-science project (Vl-e) <a href="http://www.vl-e.nl">www.vl-e.nl</a>
-</td>
-<td>The JavaGAT is currently developed as a part of the Dutch Virtual Labs for E-science 
-  project (Vl-e) middleware.
-</td>
-</tr>
-
-<tr>
-<td>The <a href="http://www.ogf.org">Open Grid Forum</a> SAGA standard (Simple API for Grid Applications). <a href="http://saga.cct.lsu.edu">saga.cct.lsu.edu</a>
-</td>
-<td>The Java reference implementation of the SAGA standard uses JavaGAT to access the grid middleware.</td>
-</tr>
-
-<tr>
-<td>VUMC (Vrije Universiteit Medical Center (Amsterdam) <a href="http://www.vumc.nl">www.vumc.nl</a></td>
-<td>Submit complex medical applications to the grid, data management.</td>
-</tr>
-
-<tr>
-<td>AMC (Amsterdam Medical Center <a href="http://www.amc.nl">www.amc.nl</a></td>
-<td>Medical data management.</td>
-</tr>
-
-<tr>
-<td>Max Planck Institute for Astrophysics in Garching <a href="http://www.mpa-garching.mpg.de">www.mpa-garching.mpg.de</a></td>
-<td>Job submission, file transfer </td>
-</tr>
-
-<tr>
-<td>Louisiane State University, University of Texas</td>
-<td>A computational chemistry middleware project that needs a lot of grid-type features</td>
-</tr>
-
-<tr>
-<td>AMOLF, the Institute for Atomic and Molecular Physics, The Netherlands <a href="http://www.amolf.nl">www.amolf.nl</a></td>
-<td>Using JavaGAT in a Fourier Transform Mass Spectrometry (FTMS) analysis application.
-  The FTMS dataset can be streamed to compute resources with the JavaGAT, with ssh, sftp 
-  and gridftp.</td>
-</tr>
-
-<tr>
-<td>The workflow system Triana (University of Cardiff) <a href="http://www.trianacode.org">www.trianacode.org</a></td>
-<td>Can use GAT to start jobs on the grid </td>
-</tr>
-
-<tr>
-<td>Georgia State University</td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td>The Multimedian project <a href="http://www.multimedian.nl">www.multimedian.nl</td>
-<td>Uses JavaGAT to start parallel jobs on the grid.</td>
-</tr>
-
-<tr>
-<td>Zuse Institute Berlin, Germany</td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td>INRIA, France</td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td>The TextGrid project <a href="http://www.textgrid.de">www.textgrid.de</td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td><a href="http://scgroup2.ceid.upatras.gr:8000/JylabHomepage">Jylab<a></td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td><a href="http://www.integrade.org.br">The Integrade Project<a></td>
-<td>Integrade adaptor set (an object oriented grid middleware layer), an Eclipse based IDE</td>
-</tr>
-
-<tr>
-<td><a href="http://www.coregrid.net">CoreGRID<a></td>
-<td>unknown</td>
-</tr>
-
-<tr>
-<td><a href="http://www.ac.upc.edu">Universitat Politècnica de Catalunya (UPC)</a> / 
-    <a href="http://www.bsc.es">Barcelona Supercomputing Center (BSC)</a>
-</td>
-<td>Job submission and file transfer in the COMP Superscalar Grid framework</td>
-</tr>
-
-</table>
-
-<p>See the <a href="http://www.gridlab.org">GridLab project</a> or the JavaGAT <a href="http://gforge.cs.vu.nl/projects/javagat">CSForge page</a> for more information.</p>
-
-<table summary="logo table" width="100%" cellspacing="10">
-<td align="center">
-<img src="images/JavaGAT.png" alt="JavaGAT logo">
-</td>
-</table>
+</p>
+
+<h2>Links</h2>
+
+<ul>
+    <li><a href="javadoc/javagat/index.html">Javadoc</a></li>
+    <li><a href="http://saga.cct.lsu.edu/">Saga</a></li>
+    <li><a href="http://www.gridlab.org">GridLab project</a></li>
+    <li><a href="http://gforge.cs.vu.nl/gf/project/javagat">JavaGAT Project page (also for bug reports)</a></li>
+</ul>

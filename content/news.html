@@ -1,35 +1,151 @@
-<p class=news>
-June 2008: Ibis GMI 2.1 is available now! 
-For more information and downloads, see the <a
-href="gmi.html">Ibis GMI subproject page</a>.
+<!-- Fancy newspaper banner :) -->
+<img src="images/banners/newspaper-banner.png" alt="Banner">
+
+<a name="javagat2.0.1"></a> 
+<h4>JavaGAT 2.0.1 released</h4> 
+
+<p>JavaGAT 2.0.1 is a bug-fix release of JavaGAT 2.0. It contains the following
+changes with respect to version 2.0:</p>
+
+<ul> 
+    <li>GlobusFileAdaptor: renameTo failed if the passed URI wasn't on the same
+    host as the file. (Bug reported by Alexander Beck-Ratzka)</li>
+
+    <li>LogicalFileCpi: underlying storage of the files belonging to the
+    logicalfile is now done in a Vector and is synchronized (previously it
+    wasn't synchronized in an ArrayList). (Bug reported by Enric Tejedor) </li>
+
+    <li> javagat.properties: updated to reflect all preferences and their
+    defaults.  </li>
+
+    <li> GliteAdaptor: added a GliteAdaptor developed by Thomas Zangerl (Thanks
+    a lot!) </li>
+
+    <li> added support for preference <"job.stop.poststage", true|false> which
+    controls whether the job should poststage if the stop method is invoked on
+    this job. (request from Keith Cover) </li>
+
+    <li> FileCpi: improved method recursiveDeleteDirectory, it only does
+    recursive delete if a direct delete fails, this can speed up poststaging
+    and sandbox removal quite a lot.  </li>
+
+    <li> LocalResourceBroker: fixed accessing of the path of the sandbox (Bug
+    reported by Hans-Martin Adorf) </li>
+
+    <li> GlobusFileAdaptor: mkdir failed if preference file.chmod wasn't set,
+    it did set the mode to 000, now it takes the umask on the remote machine as
+    default (Bug reported by Hans-Martin Adorf and others) </li>
+</ul>
+
+<a name="dach"></a> 
+
+
+<h4>Press Release: Ibis wins Data Analysis Challenge for Finding
+    Supernovae</h4> 
+
+<p>In August 2008 two Ibis teams (both from the Computer Systems group of Prof.
+Henri Bal, VU University, Amsterdam) have won the first prize in the "First
+International Data Analysis Challenge for Finding Supernovae". The competition
+was organized in conjunction with the IEEE Cluster/Grid 2008 Conference, held
+from September 29 to October 1 in Tsukuba, Japan (see: <a
+    href="http://www.cluster2008.org/challenge/">http://www.cluster2008.org/challenge/</a>).
+The goal of the competition was to promote efficient data analysis techniques
+that can be applied to large-scale and distributed networks of supercomputer
+systems.</p>
+
+<p>In the competition an enormous distributed database of scientific data,
+which was gathered by the Subaru telescope in Hawaii, had to be searched to
+find so-called 'supernova candidates'. A supernova is a phenomenon in which a
+star explodes in a spectacular manner, causing a very large mount of light to
+be emitted. For the calculation of the supernova candidates all fourteen
+candidates had a supercomputer system at their disposal comprising of 12
+computer clusters distributed over Japan.</p>
+
+<p>The competition consisted of two categories: <br />
+(1) the 'basic' category,
+in which the goal was to perform all of the necessary calculations as fast as
+possible. <br />
+(2) the 'fault-tolerant' category, in which the goal was to
+perform all calculations as fast as possible, but with the added complexity of
+having one or more of the calculation processes killed by the organizers of the
+competition. <br />
+Both categories represent realistic scenarios that play an
+important role in computing at a very large scale.</p>
+
+<p>The first VU-team, called 'Ibis Stargazers', led by Dr. Jason Maassen, and
+further comprising of Dr. Frank Seinstra, Dr. Rob van Nieuwpoort, Drs. Niels
+Drost, and Roelof Kemp, has won the competition in the basic category by
+obtaining by far the fastest result. While the VU-team required only 36 minutes
+for all calculations, the second best team used up more than 1 hour. All other
+teams obtained run-times of 3 to even more than 25 times longer. In addition,
+only half of all teams were capable of completing the challenge in this
+category at all. </p>
+
+<p>The second VU-team, called 'IbisNovae', comprising of Dr. Kees van Reeuwijk,
+has won the competition in the 'fault tolerance' category, using about 49
+minutes of calculation time. This achievement is particularly remarkable 
+as no other team was capable of completing the task in this category at all.
+This is because, in the research field, the provisioning of solutions to fault
+tolerance is known to be a very hard problem.</p>
+
+<p>The success of the
+two teams is largely due to the Ibis Grid Programming and Deployment System
+(see <a href="http://www.cs.vu.nl/ibis">http://www.cs.vu.nl/ibis/</a>), which has been
+developed at the VU University in recent years. Ibis greatly simplifies the
+writing of computer programs for large-scale and distributed applications, by
+hiding virtually all of the underlying software and hardware  complexities. The
+success in this Data Analysis Challenge is also not the only one: earlier this
+year a VU-team has won the first prize in the 'First IEEE International
+Scalable Computing Challenge', held in conjunction with CCGrid'08 in Lyon,
+France. This earlier result was also obtained with a software system that was
+implemented using Ibis. </p>
+
+<p>The Ibis software system is freely downloadable from the Ibis website: <a
+    href="http://www.cs.vu.nl/ibis">http://www.cs.vu.nl/ibis/</a>.
 </p>
 
-<p class=news>
-May 2008: Ibis MPJ 2.1 is available now! 
-For more information and downloads, see the <a
-href="mpj.html">Ibis MPJ subproject page</a>.
-</p>
 
-<p class=news>
+<a name="rmi2.1"></a>
+<h4>Ibis RMI 2.1</h4>
+<p>
 May 2008: Ibis RMI 2.1 is available now! 
 For more information and downloads, see the <a
 href="rmi.html">Ibis RMI subproject page</a>.
 </p>
 
-<p class=news>
+<a name="mpj2.1"></a>
+<h4>Ibis MPJ 2.1</h4>
+<p>
+May 2008: Ibis MPJ 2.1 is available now! 
+For more information and downloads, see the <a
+href="mpj.html">Ibis MPJ subproject page</a>.
+</p>
+
+<a name="gmi2.1"></a>
+<h4>Ibis GMI 2.1</h4>
+<p>June 2008: Ibis GMI 2.1 is available now! 
+For more information and downloads, see the <a
+    href="gmi.html">Ibis GMI subproject page</a>.
+</p>
+
+<h4>SCALE Challenge</h4>
+<p>
 May 2008: The Ibis team won 1st place (shared) at the <a href="http://ccgrid2008.ens-lyon.fr/CCGrid2008_SCALE2008.html">SCALE Challenge 2008</a>!
 </p>
 
-<p class=news>
+<h4>Tutorial</h4>
+<p>
 May 2008: Program and slides for the Ibis tutorial at CCGrid'08 are <a href=tutorial.html>here</a>
 </p>
 
-<p class=news>
+<h4>Zorilla 1.0 Beta 1</h4>
+<p>
 May 2008: New Zorilla Release (1.0 Beta 1). See the 
  <a href="zorilla.html">Zorilla subproject page</a> for more information on Zorilla, and downloads.
 </p>
 
-<p class=news>
+<h4>JavaGAT 2.1-rc1</h4>
+<p>
 May 2008: JavaGAT 2.0-rc1 is available now! 
 JavaGAT 2.0-rc1 contains many bug fixes,
 some changes and additions to the API and new 
@@ -37,13 +153,15 @@ adaptors (among them, Globus 4).
 For more details, please go to the <a href="https://gforge.cs.vu.nl/projects/javagat">JavaGAT project page</a>.
 </p>
 
-<p class=news>
+<h4>Satin 2.1</h4>
+<p>
 May 2008: Satin 2.1 is available now! 
 For more information and downloads, see the <a
 href="satin.html">Satin subproject page</a>.
 </p>
 
-<p class=news>
+<h4>IPL 2.1.1</h4>
+<p>
 May 2008: IPL 2.1.1 is available now! 
 IPL 2.1.1 is mostly a maintainance release, fixing a couple of problems
 with IPL 2.1.

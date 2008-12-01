@@ -1,11 +1,3 @@
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/frs/?group_id=16">Download Zorilla</a></td>
-<td class=topmenu><a class=topmenu href="publications.html#zorilla">Zorilla Publications</a></td>
-<td class=topmenu><a class=topmenu href="talks.html#zorilla">Zorilla Talks</a></td>
-<td class=topmenu><script type="text/javascript"> generate_contact_address( "niels", "cs.vu.nl" ); </script></td>
-</tr>
-</table>
-
 <h2>Zorilla</h2>
 
 <a name=overview><h3>What is Zorilla?</h3></a>
@@ -37,14 +29,21 @@ can also supply one or more nodes to contact.</dd>
 Gossiping, with other nodes (or peers). The gossiping is used to exchange
 information about peers, such as location, contact address, etc.  Because of
 the nature of the "ARRG" algorithm used, each Zorilla node will have a list
-consisting of a constantly changing random set of peers. For more information, see the HPDC 2007 paper in the <a href="zorilla_publications.html">publications</a> section.</dd>
+consisting of a constantly changing random set of peers. For more information, see the HPDC 2007 paper in the <a href="papers.html#zorilla">publications</a> section.</dd>
 
 
 <dt>Clustering</dt>
 <dd>Using the random stream of peers, a node then build up a list of neighbours: peers which are close-by to itself. This allows a node to do a "local" search of the network, by contacting its neighbours.</dd>
 
-<dt>Scheduler</dt>
-<dd>When a user submits a job to his or her local Zorilla node, this node starts looking for resources. This is done by contacting other nodes in the network, an requesting them to "help out" with this job. Nodes are contacting using a bounded flooding mechanism. First, resources are searched for at the neighbours found using the clustering mechanism. Then, resources are search at the neighbours of these neighbours, and so on. This allows a nodes to find resources "close-by". For more information, see the GP2P 2006 paper in the <a href="zorilla_publications.html">publications</a> section.</dd>
+<dt>Scheduler</dt> 
+<dd>When a user submits a job to his or her local Zorilla node, this node
+starts looking for resources. This is done by contacting other nodes in the
+network, an requesting them to "help out" with this job. Nodes are contacting
+using a bounded flooding mechanism. First, resources are searched for at the
+neighbours found using the clustering mechanism. Then, resources are search at
+the neighbours of these neighbours, and so on. This allows a nodes to find
+resources "close-by". For more information, see the GP2P 2006 paper in the <a
+    href="papers.html#zorilla">publications</a> section.</dd>
 
 
 <dt>Job</dt>
@@ -57,7 +56,7 @@ consisting of a constantly changing random set of peers. For more information, s
 
 <h3>How do I use Zorilla?</h3>
 
-<p>To start using Zorilla, first <a href="https://gforge.cs.vu.nl/frs/?group_id=16">download</a> Zorilla. Zorilla must then be installed, and run, on any machine which needs to be in the Zorilla "grid". See the documentation in the distribution for further details.</p>
+<p>To start using Zorilla, first <a href="downloads.html">download</a> Zorilla. Zorilla must then be installed, and run, on any machine which needs to be in the Zorilla "grid". See the documentation in the distribution for further details.</p>
 
 <p>After installing Zorilla on one or more machines, jobs can be submitted to Zorilla using either the JavaGAT, or via several console applications. A single command (zubmit) should normally be enough to start running jobs on Zorilla.</p>
 

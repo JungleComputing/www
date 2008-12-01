@@ -1,20 +1,3 @@
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href="http://gforge.cs.vu.nl/frs/?group_id=16">Download Satin</a></td>
-<td class=topmenu><a class=topmenu href="downloads/satin/progman.pdf">Manual</a></td>
-<td class=topmenu><a class=topmenu href="publications.html#satin">Satin Publications</a></td>
-<td class=topmenu><script type="text/javascript"> generate_contact_address( "ibis", "cs.vu.nl" ); </script></td>
-</tr>
-</table>
-
-<table class=topmenu><tr>
-<td class=topmenu><a class=topmenu href =
-"javadoc/satin/index.html">Javadoc</a></td>
-<td class=topmenu><a class=topmenu href="downloads/satin/usersguide.pdf">User's Guide</a></td>
-<td class=topmenu><a class=topmenu href="talks.html#satin">Satin Talks</a></td>
-<td class=topmenu><a class=topmenu href="https://gforge.cs.vu.nl/tracker/?group_id=16">Report Bugs</a></td>
-</tr>
-</table>
-
 <h2>Satin</h2>
 
 Satin extends Java with Cilk like primitives, that make it very convenient for
@@ -32,30 +15,13 @@ provides efficient fault-tolerance, malleability (e.g. the ability to cope with
 dynamically changing number of processors) and migration in a way that is
 transparent to the application. 
 
-<!--
-<p>We have extended the Java language with Cilk
-like primitives, that make it very convenient for the programmer to
-write divide and conquer style programs.
-Unlike manager/worker programs,
-divide-and-conquer algorithms operate by recursively dividing a problem
-into smaller subproblems.  This recursive subdivision goes on until
-the remaining subproblem becomes trivial to solve.  After solving
-subproblems, their results are recursively recombined until the final
-solution is assembled.
-By allowing subproblems to be divided recursively, the
-class of divide-and-conquer algorithms subsumes the manager/worker algorithms,
-thus enlarging the set of possible grid applications.</p>
+<h3>Links</h3>
 
-<p>We have implemented the system, called Satin, on top of Ibis. The name is of course a tribute to <a href=" http://supertech.lcs.mit.edu/cilk/">Cilk</a>, which inspired Satin. The ultimate goal of Satin is to run parallel divide and conquer applications on wide-area systems. We believe that such systems will probably be hierarchical in nature (such as the DAS).  Because divide and conquer programs are also structured in a hierarchy, we expect such applications to map nicely on hierarchical systems. The idea is that all complex wide-area optimizations are in the Satin runtime system, and not in the Satin input programs. Therefore, the burden of hand-optimizing the applications for wide-area systems is lifted from the programmer.</p>
-
-<p>In the <a href=" http://www.cs.vu.nl/~rob/papers/europar2000.ps.gz">EuroPar'2000 paper</a>, we have shown that an earlier Satin implementation achieves good performance on a cluster of workstations, for twelve different applications.</p>
-
-<p>A paper describing the load-balancing algorithms and performance was published in PPoPP 2001. It is also online <a href=" http://www.cs.vu.nl/~rob/papers/ppopp01-rob.ps.gz">here</a>. In this paper, we experimentally compare Random work Stealing (RS) with existing load-balancing strategies that are believed to be efficient for multi-cluster systems, Random Pushing and two variants of Hierarchical Stealing. We demonstrate that, in practice, they obtain less than optimal results. We introduce a novel load-balancing algorithm, Cluster-aware Random Stealing (CRS) which is highly efficient and easy to implement. CRS adapts itself to network conditions and job granularities, and does not require manually-tuned parameters. Although CRS sends more data across the WANs, it is faster than its competitors for 11 out of 12 test applications with various WAN configurations. It has at most 4 percent overhead in run time compared to RS on a single, large cluster, even with high wide-area latencies and low wide-area bandwidths. These strong results suggest that divide-and-conquer parallelism is a useful model for writing distributed supercomputing applications on hierarchical wide-area systems.</p>
-
-<p>We did experiments on a real grid testbed using 40 processors in total, in 6 machines located at 5 sites all over Europe, with 4 different processor architectures. Satin on the TCP Ibis implementation ran on all sites, in pure Java, without even having to recompile anything.</p>
-
-<p>Grid applications have to cope with dynamically changing computing resources as machines may crash or be claimed by other, higher-priority applications. We have implemented a mechanism that enables fault-tolerance, malleability (e.g. the ability to cope with dynamically changing number of processors) and migration for divide-and-conquer applications on the Grid. The novelty of our approach is restructuring the computation tree which eliminates redundant computation and salvages partial results computed by the processors leaving the computation. This enables the applications to adapt to dynamically changing numbers of processors and to migrate the computation without loss of work. Our mechanism is easy to implement and deploy in grid environment. The overhead it incurrs is close to zero.</p>
-
--->
-
+<ul>
+    <li><a href="downloads/satin/progman.pdf">Manual</a></li>
+    <li><a href="papers.html#satin">Satin Papers</a></li>
+    <li><a href = "javadoc/satin/index.html">Javadoc</a></li>
+    <li><a href="downloads/satin/usersguide.pdf">User's Guide</a></li>
+    <li><a href="talks.html#satin">Satin Talks</a></li>
+</ul>
 

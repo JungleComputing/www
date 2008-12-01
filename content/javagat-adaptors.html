@@ -1,0 +1,45 @@
+<p>There are several objects in JavaGAT that can be implemented with a
+middleware specific adaptor. For instance the generic JavaGAT object File, can
+be implemented for different protocols by implementing multiple File adaptors.
+The table below shows the available JavaGAT objects together with the adaptors
+that implement this object.</p>
+
+<table border="1" cellspacing="0"
+    cellpadding="5"> <tbody><tr> <th>name</th> <th>adaptors</th> </tr> <tr>
+	    <td>
+		    FileInputStream
+		</td> <td> CopyingFileInputStreamAdaptor<br /> SftpFileInputStreamAdaptor<br />
+		GridFTPFileInputStreamAdaptor<br /> LocalFileInputStreamAdaptor<br />
+		FTPFileInputStreamAdaptor<br /> HTTPFileInputStreamAdaptor<br />
+		HTTPSFileInputStreamAdaptor<br /> </td> </tr> <tr> <td>
+LogicalFile </td>
+	    <td> GenericLogicalFileAdaptor<br /> </td> </tr> <tr> <td>
+File </td>
+	    <td> SftpFileAdaptor<br /> SshTrileadFileAdaptor<br />
+		CommandlineSshFileAdaptor<br /> SftpGanymedFileAdaptor<br />
+		GridFTPFileAdaptor<br /> LocalFileAdaptor<br /> FTPFileAdaptor<br />
+		GT4GridFTPFileAdaptor<br /> RFTGT4FileAdaptor<br />
+		SrcToLocalToDestCopyFileAdaptor<br /> StreamingFileAdaptor<br /> </td>
+		</tr> <tr> <td>
+		ResourceBroker
+		</td> <td> SshTrileadResourceBrokerAdaptor<br />
+		WSGT4newResourceBrokerAdaptor<br /> GlobusResourceBrokerAdaptor<br />
+		LocalResourceBrokerAdaptor<br /> SgeResourceBrokerAdaptor<br />
+		CommandlineSshResourceBrokerAdaptor<br />
+		GridSAMResourceBrokerAdaptor<br /> GliteResourceBrokerAdaptor<br />
+		LocalQResourceBrokerAdaptor<br /> ZorillaResourceBrokerAdaptor<br />
+		    </td> </tr> <tr> <td><a
+		    AdvertService
+		    </td> <td> GenericAdvertServiceAdaptor<br /> </td> </tr> <tr> <td>
+		    Monitorable
+		    </td> <td> MercuryMonitorableAdaptor<br /> </td> </tr> <tr> <td>
+Endpoint </td>
+	    <td> SocketEndpointAdaptor<br /> </td> </tr> <tr> <td>
+		    FileOutputStream
+		</td> <td> SftpFileOutputStreamAdaptor<br />
+		GridFTPFileOutputStreamAdaptor<br /> LocalFileOutputStreamAdaptor<br />
+		FTPFileOutputStreamAdaptor<br /> HTTPFileOutputStreamAdaptor<br />
+		HTTPSFileOutputStreamAdaptor<br /> </td> </tr> <tr> <td
+RandomAccessFile
+	</td> <td> LocalRandomAccessFileAdaptor<br /> </td> </tr>
+</tbody></table>

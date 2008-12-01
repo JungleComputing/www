@@ -9,7 +9,7 @@ echo
 echo Generating papers and talks content from bibtex files...
 echo
 
-for CATEGORY in javagat satin mpj gmi zorilla ibis smartsockets other
+for CATEGORY in javagat satin mpj gmi zorilla ipl smartsockets other
 do
     echo Generating papers and talks for $CATEGORY
     if [ -f papers/$CATEGORY.bib ]

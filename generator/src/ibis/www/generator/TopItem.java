@@ -62,8 +62,8 @@ class TopItem {
     }
 
     void writeSubMenu(PrintStream out, int[] activeItems) {
-        //System.err.println("Active items = " + Arrays.toString(activeItems));
-        
+        // System.err.println("Active items = " + Arrays.toString(activeItems));
+
         out.println("<!-- SUB MENU -->");
         out.println();
         out.println("    <td class=main>");
@@ -99,18 +99,23 @@ class TopItem {
 
             out.println("<tr>");
 
-            out.println("<!-- EMPTY SUB MENU -->");
-            out.println();
-            out.println("    <td class=main>");
-            out.println("        <table class=menu>");
-            out.println("        </table>");
-            out.println("    </td>");
-
-            generator.writeContent(out, pageFilename);
-
             if (pageFilename.equals("index.html")) {
+                generator.writeContent(out, pageFilename);
                 // add what's new box to index page
                 generator.writeWhatsNew(out);
+            } else if ((pageFilename.equals("downloads.html"))) {
+                //downloads page has one big cell
+                generator.writeContent(out, pageFilename);
+            } else {
+
+                out.println("<!-- EMPTY SUB MENU -->");
+                out.println();
+                out.println("    <td class=main>");
+                out.println("        <table class=menu>");
+                out.println("        </table>");
+                out.println("    </td>");
+
+                generator.writeContent(out, pageFilename);
             }
 
             out.println("</tr>");

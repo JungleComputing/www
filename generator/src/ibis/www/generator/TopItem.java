@@ -112,7 +112,6 @@ class TopItem {
                 out.println();
                 out.println("    <td class=main>");
                 out.println("        <img src=\"images/gradient.png\">");
-                out.println("        </table>");
                 out.println("    </td>");
 
                 generator.writeContent(out, pageFilename);

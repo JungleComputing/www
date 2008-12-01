@@ -99,6 +99,13 @@ class TopItem {
 
             out.println("<tr>");
 
+            out.println("<!-- EMPTY SUB MENU -->");
+            out.println();
+            out.println("    <td class=main>");
+            out.println("        <table class=menu>");
+            out.println("        </table>");
+            out.println("    </td>");
+
             generator.writeContent(out, pageFilename);
 
             if (pageFilename.equals("index.html")) {

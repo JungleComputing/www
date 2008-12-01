@@ -3,7 +3,7 @@
 echo Generating html with ibis-website-generator...
 echo
 
-java -cp generator/lib/*.jar ibis.www.generator.Generator generator/menu.properties generator/header.html generator/footer.html
+java -cp generator/lib/*.jar ibis.www.generator.Generator menu.properties generator/header.html generator/footer.html
 
 echo
 echo Generating papers and talks content from bibtex files...

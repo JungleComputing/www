@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #content_cell {
-    width: 775px;
+    width: 600px;
 }
 
 a {
@@ -35,10 +35,14 @@ img.floating {
     padding: 10px 10px 10px 10px ;
 }
 
+img.banner {
+    width: 590px;
+}
+
 /* MAIN TABLE */
 
 table.main {
-    width: 975px ;
+    width: 775px ;
     background-color: #FFFFFF ; 
     /*    border: thin dotted rgb(250,0,255) ; */
     margin-top: 0px;
@@ -52,7 +56,7 @@ table.main {
 }
 
 td.main {
-    /* border: thin dotted rgb(250,0,255) ; */
+/*    border: thin dotted rgb(250,0,255) ; */
     padding-top:3px;
     padding-bottom:3px;
     padding-left:3px;
@@ -66,7 +70,7 @@ div.topmenu {
 /*    background-color: #1966AE;*/
     background-color: #6699C9;
     color: #003B73;
-    width: 955px;
+    width: 800px;
 }
 
 table.topmenu {
@@ -84,7 +88,7 @@ a.topmenu {
     width: 100px;
     height: 18px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     display: table-cell;
     text-decoration: none;

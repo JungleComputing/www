@@ -1,6 +1,60 @@
 <!-- Fancy newspaper banner :) -->
 <img class=banner src="images/banners/newspaper-banner.png" alt="Banner">
 
+<a name="javagat2.0.4"></a> 
+<h4>JavaGAT 2.0.4 released</h4> 
+<p>Februari 2009: JavaGAT 2.0.4 is now available from its
+<a href="http://gforge.cs.vu.nl/gf/project/javagat/frs/?action=FrsReleaseView&release_id=124">downloads page</a>.
+It is mostly a bug-fix release of JavaGAT 2.0.3, and contains a.o. the following
+changes with respect to version 2.0.3:</p>
+<ul>
+    <li>fixed a couple of glitches in the tests.</li>
+    <li>Glite adaptor: various updates and fixes, but according to the
+    developers, its file adaptor is still to be considered "experimental".</li>
+    <li>Globus File adaptor: various fixes.</li>
+    <li>SshTrilead File adaptor: a couple of fixes for operations on
+    non-existent files.
+    Also, its getAbsolutePath() implementation was wrong.</li>
+    <li>File.getName() returned null in some cases, which is a no-no.
+    This is fixed, and this also fixes bug 187.</li>
+    <li>re-implemented metrics administration. The old method maintained
+    static lists inside GATEngine which were never cleaned up, so that there
+    was a huge memory leak because the engine kept references to all jobs that
+    were ever run. Now, the lists are maintained within the monitorable object
+    itself and are no longer static. This fixes bug 134.</li>
+    <li>(almost) all ResourceBroker adaptors: fixed stop() method:  the method
+    may now be called in any job state, as promised in the javadoc.</li>
+    <li>wsgt4new ResourceBroker adaptor: fixed to actually use a user-supplied
+    credential (bug reported by Ralf Groeper).</li>
+    <li>Sshtrilead and Commandlinessh ResourceBroker adaptors: fixed to prevent
+    expansion of shell-meta-characters, and to make them work in case the
+    shell on the server side is a C-shell
+    (bug reported by Kees van Reeuwijk).</li>
+    <li>fixed classloader issue: use either the classloader of the class that
+    prompted the loading of JavaGAT or the context classloader, for the
+    parent of the URL classloaders for the adaptors
+    (bug reported by Ralf Groeper).</li>
+    <li>fixed globus security utils: if the CredentialSecurityObject already
+    contains a GSSCredential, just return that instead of ignoring it
+    (bug reported by Ralf Groeper).</li>
+    <li>fixed CommandRunner: now uses ProcessBuilder. This protects against
+    local expansion of shell meta characters.</li>
+    <li>Wsgt4new ResourceBroker Adaptor: sometimes gave redundant callbacks
+    when the job was already finished, for instance, a redundant POST_STAGING
+    callback, which caused overwriting of initially correct output files
+    (bug reported by Brian Carpenter).<li>
+    <li>fixed File.copy method to mimic cp -r behaviour when copying
+    directories (copy dir a to b ended up as a copy b/a, even if b did not
+    exist, now it only does so when a directory b exists, otherwise a
+    directory b is created with copy of contents of a).</li>
+    <li>LocalFileAdaptor: fixed bug 221 (getParentFile).</li>
+    <li>Zorilla adaptor: various fixes.</li>
+</ul>
+
+<a name="MaRVIN"></a>
+<h4>MaRVIN Team wins 3rd prize at Billion Tripple track of Semantic Web Challenge 2008</h4>
+<p>October 2008: The MaRVIN team used the Ibis Portability Layer to develop a self-organising distributed reasoner that can handle these large amounts of data. The MaRVIN system was demonstrated on the DAS-3 distributed supercomputer and was much appreciated for its innovative ideas, winning the 3rd prize in the Billion Triples track, see the <a href="http://www.cs.vu.nl/ibis/awards.html#MaRVIN">Awards</a> page.</p>
+
 <a name="smartsockets-1.4"></a>
 <h4>Smartsockets 1.4 released</h4>
 <p>October 2008: Smartsockets 1.4 is now available from the downloads page. This is the first public release of Smartsockets.</p>

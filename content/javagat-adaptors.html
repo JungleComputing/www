@@ -8,15 +8,18 @@ that implement this object.</p>
     cellpadding="5"> <tbody><tr> <th>name</th> <th>adaptors</th> </tr> <tr>
 	    <td>
 		    FileInputStream
-		</td> <td> CopyingFileInputStreamAdaptor<br /> SftpFileInputStreamAdaptor<br />
+		</td> <td> CopyingFileInputStreamAdaptor<br /> SftpTrileadFileInputStreamAdaptor<br />
 		GridFTPFileInputStreamAdaptor<br /> LocalFileInputStreamAdaptor<br />
 		FTPFileInputStreamAdaptor<br /> HTTPFileInputStreamAdaptor<br />
 		HTTPSFileInputStreamAdaptor<br /> </td> </tr> <tr> <td>
 LogicalFile </td>
 	    <td> GenericLogicalFileAdaptor<br /> </td> </tr> <tr> <td>
 File </td>
-	    <td> SftpFileAdaptor<br /> SshTrileadFileAdaptor<br />
-		CommandlineSshFileAdaptor<br /> SftpGanymedFileAdaptor<br />
+	    <td> SftpTrileadFileAdaptor<br /> SshTrileadFileAdaptor<br />
+		CommandlineSshFileAdaptor<br />
+		GliteGuidFileAdaptor<br />
+		GliteSrmFileAdaptor<br />
+		GliteLfnFileAdaptor<br />
 		GridFTPFileAdaptor<br /> LocalFileAdaptor<br /> FTPFileAdaptor<br />
 		GT4GridFTPFileAdaptor<br /> RFTGT4FileAdaptor<br />
 		SrcToLocalToDestCopyFileAdaptor<br /> StreamingFileAdaptor<br /> </td>
@@ -26,6 +29,8 @@ File </td>
 		WSGT4newResourceBrokerAdaptor<br /> GlobusResourceBrokerAdaptor<br />
 		LocalResourceBrokerAdaptor<br /> SgeResourceBrokerAdaptor<br />
 		CommandlineSshResourceBrokerAdaptor<br />
+		UnicoreResourceBrokerAdaptor<br />
+		GliteResourceBrokerAdaptor<br />
 		GridSAMResourceBrokerAdaptor<br /> GliteResourceBrokerAdaptor<br />
 		LocalQResourceBrokerAdaptor<br /> ZorillaResourceBrokerAdaptor<br />
 		    </td> </tr> <tr> <td><a
@@ -36,7 +41,7 @@ File </td>
 Endpoint </td>
 	    <td> SocketEndpointAdaptor<br /> </td> </tr> <tr> <td>
 		    FileOutputStream
-		</td> <td> SftpFileOutputStreamAdaptor<br />
+		</td> <td> SftpTrileadFileOutputStreamAdaptor<br />
 		GridFTPFileOutputStreamAdaptor<br /> LocalFileOutputStreamAdaptor<br />
 		FTPFileOutputStreamAdaptor<br /> HTTPFileOutputStreamAdaptor<br />
 		HTTPSFileOutputStreamAdaptor<br /> </td> </tr> <tr> <td

@@ -1,6 +1,54 @@
 <!-- Fancy newspaper banner :) -->
 <img class=banner src="images/banners/newspaper-banner.png" alt="Banner">
 
+<a name="javagat2.0.5"></a> 
+<h4>JavaGAT 2.0.5 released</h4> 
+<p>April 2009: JavaGAT 2.0.5 is now available from its
+<a href="http://gforge.cs.vu.nl/gf/project/javagat/frs/?action=FrsReleaseView&release_id=132">downloads page</a>.
+It is mostly a bug-fix release of JavaGAT 2.0.4, and contains a.o. the following
+changes with respect to version 2.0.4:</p>
+<ul>
+<li> Alexander Beck-Ratzka contributed a Unicore resourcebroker adaptor.</li>
+<li> The Ganymed sftp adaptor has been replaced with a Trilead sftp adaptor.</li>
+<li> Removed sftp and sftpnew adaptors as they are obsoleted by the
+Trilead sftp adaptor.</li>
+<li> JavaGAT now uses slf4j as logging system. This means that you can use
+your favorite logging system, as long as there is an slf4j implementation
+for it. To accomplish that, you need to put the appropriate slf4j jar-file
+in front of your classpath. If, like before, you want to use log4j, you
+don't have to do anything, since this is the default.</li>
+<li> The GATEngine now supports a "shared" jar-file directory, which allows
+adaptors to share some of their dependencies, so that these are loaded
+with the same classloader. This is useful for for instance security
+objects that need to be shared by several adaptors.
+See the file doc/adaptors/whySharedDirectory.txt.</li>
+<li> There was an error in the unmarshal method of the LogicalFileCpi, which
+made it impossible to unmarshal an advertized logicalfile.</li>
+<li> There was a bug in the fixURI method of the FileCpi which sometimes made
+it refer to a wrong location.</li>
+<li> When staging in a file with an absolute source path and no explicit
+destination, the file was staged to the wrong location (not the sandbox).</li>
+<li> An explicit check for null job arguments was added, so that an exception
+is thrown when the job description is created, instead of further on when
+the job is run.</li>
+<li> Fixed various problems in the Globus and FTP file adaptor. This is tricky
+stuff because different servers behave differently! We have tested with
+various servers, and it seems to work now, but your mileage may vary!</li>
+<li> The Koala adaptor is now functional.
+<li> The sshtrilead file adaptor sometimes failed because warnings were printed
+on stderr. Now, these warnings are ignored (see bug #256).</li>
+<li> Added a list method for the CommandlineSshFileAdaptor.</li>
+<li> Protect executable and arguments against shell meta character expansion
+in the Gridsam resource broker adaptor.</li>
+<li> Some API has been added for file permissions. This basically is jdk7 stuff.
+For now, gLite is the only adaptor that implements (some of) it.
+org.gridlab.gat.io.File now has a method getFileAttributeView().</li>
+<li> A special version of the GATEngine has been added for Android.</li>
+<li> There has been a lot of development on the various gLite adaptors.</li>
+<li> The Zorilla adaptor has been improved considerably.</li>
+
+</ul>
+
 <a name="javagat2.0.4"></a> 
 <h4>JavaGAT 2.0.4 released</h4> 
 <p>Februari 2009: JavaGAT 2.0.4 is now available from its

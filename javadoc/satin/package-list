@@ -1,9 +1,16 @@
 ibis.satin
 ibis.satin.impl
 ibis.satin.impl.aborts
+ibis.satin.impl.checkPointing
 ibis.satin.impl.communication
 ibis.satin.impl.faultTolerance
 ibis.satin.impl.loadBalancing
 ibis.satin.impl.rewriter
 ibis.satin.impl.sharedObjects
 ibis.satin.impl.spawnSync
+ibis.satin.impl.syncrewriter
+ibis.satin.impl.syncrewriter.analyzer
+ibis.satin.impl.syncrewriter.analyzer.controlflow
+ibis.satin.impl.syncrewriter.bcel
+ibis.satin.impl.syncrewriter.controlflow
+ibis.satin.impl.syncrewriter.util

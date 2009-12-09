@@ -1,19 +1,19 @@
 <h2>Satin</h2>
 
-Satin extends Java with Cilk like primitives, that make it very convenient for
+Satin extends Java with Cilk like primitives that make it very convenient for
 the programmer to write divide and conquer style programs. Unlike
 manager/worker programs, divide-and-conquer algorithms operate by recursively
 dividing a problem into smaller subproblems. This recursive subdivision goes on
 until the remaining subproblem becomes trivial to solve. After solving
 subproblems, their results are recursively recombined until the final solution
 is assembled.  Due to it's hierarchical nature, the divide-and-conquer model
-maps cleanly to grid systems, which    also tend to have an hierarchical
+maps cleanly to grid systems, which also tend to have an hierarchical
 structure. Satin contains a efficient and simple load-balancing algorithm,
-Cluster-aware Random Stealing (CRS), which is shown to outperform existing
+Cluster-aware Random Stealing (CRS), which outperforms existing
 load- balancing strategies on multi-cluster systems.  In addition, Satin also
 provides efficient fault-tolerance, malleability (e.g. the ability to cope with
 dynamically changing number of processors) and migration in a way that is
-transparent to the application. 
+transparent to the application.
 
 <h3>Links</h3>
 

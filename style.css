@@ -1,5 +1,6 @@
 body {
-    background-color: #0055A5 ; 
+/*   background-color: #0055A5 ;  */
+    background-color: #666666 ; 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #000000;
@@ -22,10 +23,6 @@ a {
 a:hover {
     color: #CC0000;
     text-decoration: underline;
-}
-
-dt {
-    font-weight: bold;
 }
 
 img { border: none }
@@ -56,17 +53,19 @@ img.banner {
 /* MAIN TABLE */
 
 table.main {
-    width: 775px ;
+    width: 830px ;
     background-color: #FFFFFF ; 
     /*    border: thin dotted rgb(250,0,255) ; */
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
+    border-collapse: separate;
 
     padding-top:10px;
     padding-bottom:10px;
     padding-left:10px;
     padding-right:10px;
+    border: none;
 }
 
 td.main {
@@ -76,34 +75,38 @@ td.main {
     padding-left:3px;
     padding-right:3px;
     vertical-align: top;
+    border: none;
 }
 
 /* TOP MENU */
 
 div.topmenu {
-/*    background-color: #1966AE;*/
-    background-color: #6699C9;
+/*    background-color: #6699C9; */
+    background-color: #999999; 
     color: #003B73;
     width: 100%;
 }
 
 table.topmenu {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
     border: 0;
     border-collapse: collapse;
-    width: 800px;
+/*    width: 700px; */
+    width: 100%;
+    border: none;
 }
 
 td.topmenu {
     padding: 2px 2px 2px 2px;
+    border: none;
 }
 
 a.topmenu {
     text-align: center;
-    width: 100px;
+    width: 110px;
     height: 18px;
     font-weight: bold;
     font-size: 13px;
@@ -129,6 +132,8 @@ table.news {
     width: 200px;
     vertical-align: top;
     border-collapse: collapse;
+    border-left: none;
+    border-right: none;
 }
 
 th.news {
@@ -137,12 +142,18 @@ th.news {
     padding:  0 0 0 10px  ;
     margin:  0 0 0 0px  ;
     height: 23px;
-    color: #003B73;
-    background-color: #E5EEF6;
+    color: #000000;
+  /*  background-color: #E5EEF6; */
+    background-color: #CCCCCC;
+    border-left: none;
+    border-right: none;
 }
 
 
 td.news {
+    border-left: none;
+    border-right: none;
+    border-top: none;
     border-bottom: 1px solid #99BBDB;
     padding: 7px 10px 7px 10px;
 }
@@ -164,9 +175,13 @@ table.menu {
     vertical-align: top;
     border-collapse: collapse; 
     margin-top: 1px;
+    border-left: none;
+    border-right: none;
 }
 
 td.menu {
+    border-left: none;
+    border-right: none;
     border-top: 1px solid #99BBDB;
     border-bottom: 1px solid #99BBDB;
     padding: 0px 0px 0px 0px;
@@ -207,5 +222,24 @@ a.menu:hover {
     color: #CC0000;
     text-decoration: underline;
     background-color: #E5EEF6;
+}
+
+
+table {
+    border-collapse:collapse; 
+    border: none;
+}
+
+th,td {
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black; 
+}
+
+td.break {
+    color: #666666;
+}
+
+td.empty {
+    border: none;
 }
 

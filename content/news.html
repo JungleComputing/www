@@ -1,6 +1,57 @@
 <!-- Fancy newspaper banner :) -->
 <img class=banner src="images/banners/newspaper-banner.png" alt="Banner">
 
+<a name="javagat2.1.1"></a> 
+<h4>JavaGAT 2.1.1 released</h4> 
+<p>June 2011: JavaGAT 2.1.1 is now available from its
+<a href="http://gforge.cs.vu.nl/gf/project/javagat/frs/?action=FrsReleaseView&release_id=154">downloads page</a>.
+It contains a.o. the following changes with respect to version 2.1.0:</p>
+<ul>
+<li> reduced the number of jar-files in the lib directory by combining them where possible. This reduces the number of open files in any JavaGAT application significantly. </li>
+<li> gLite adaptor: use string constants from HardwareResourceDescription where possible. </li>
+<li> GridFTPFileAdaptor: create a lock when an FTP client has succesfully been created. </li>
+<li> GlobusJob: there were scenarios where starttime was never set. </li>
+<li> GlobusResourceBroker: now also looks at the SoftwareDescription.JOB_QUEUE attribute, in addition to the globus.queue attribute, which still is supported for backwards compatibility. </li>
+<li> WSGT4newResourceBrokerAdaptor: now also looks at the SoftwareDescription.JOB_QUEUE attribute, in addition to the machine.queue attribute, which still is supported for backwards compatibility. </li>
+<li> GT42ResourceBrokerAdaptor: now also looks at the SoftwareDescription.JOB_QUEUE attribute, in addition to the machine.queue attribute, which still is supported for backwards compatibility. </li>
+<li> LocalFileAdaptor made to work on Windows. </li>
+<li> LocalJob: when stopped, actually destroy Java process before waiting until the output streams are finished (otherwise, you can wait for a long time ...). </li>
+<li> modifications to SshTrilead and SftpTrilead adaptors to support a new version of the sshtrilead library, which we modified to have some ssh-agent support. </li>
+<li> Fixed SftpTrileadFileInputStreamAdaptor to recognize EOF properly. </li>
+<li> Various improvements to the SGEResourceBroker (we had someone use it ...) </li>
+<li> prevent SshTrileadFileAdaptor from executing stuff through ssh when it can do it locally. </li>
+<li> URI: improved refersToLocalHost method. </li>
+<li> GATEngine: try to terminate jobs before ending adaptors. </li>
+<li> FileCpi: copyDirectory path manipulation was wrong for Windows. </li>
+<li> JobCpi: improved shutdown hook to make a second invocation wait until the first one is done. This prevents GAT.end to call end() on the adaptors before the job shutdown is done. </li>
+</ul>
+
+<a name="javagat2.1.0"></a> 
+<h4>JavaGAT 2.1.0 released</h4> 
+<p>July 2010: JavaGAT 2.1.0 is now available from its
+<a href="http://gforge.cs.vu.nl/gf/project/javagat/frs/?action=FrsReleaseView&release_id=149">downloads page</a>.
+It contains a.o. the following changes with respect to version 2.0.5:</p>
+<ul>
+    <li> local file adaptor: rename() did not work properly.</li>
+    <li> modified axis client config mechanism for Globus and Gridsam adaptors: the mechanism no longer depends on a System property. Instead, each adaptor has its own jndi.properties file.</li>
+    <li> Added "getSupportedScheme()" methods to adaptors, so that engine can check which adaptors are applicable for a specific scheme, without actually invoking the adaptor constructor.</li>
+    <li> Added adaptor-specific schemes, which, for instance, allows one to use the "glite" scheme to select the gLite adaptor.</li>
+    <li> A ScheduledExecutor class has been added to the GATEngine utilities.  This is a useful class for adaptors that have to execute a job periodically. Using this class, they don't have to create their own thread.</li>
+    <li> various predefined String constants have been introduced, see the Javadoc of the SoftwareDescription API.</li>
+    <li> commandlineSsh file adaptor now implements createNewFile() and length().</li>
+    <li> there have been various fixes and additions to the Glite adaptors.</li>
+    <li> RandomAccessFile adaptors have been added for Globus and SftpTrilead.</li>
+    <li> adaptor order was not quite deterministic yet, so that different copies of the same javagat release could have different behaviour.</li>
+    <li> Globus File adaptors have been made far more robust (thanks to Stefan Bozic and Bastian Boegel).</li>
+    <li> The GT4 file adaptor now actually seems to work.</li>
+    <li> FTP file adaptor copy method did CR-LF translation on copy.</li>
+    <li> FTP adaptor did not deal with symbolic links properly.</li>
+    <li> FileCpi.getParentFile() was wrong in case of an absolute URI with a relative path where the host part refers to the local host.</li>
+    <li> Zorilla adaptor now sets up connection lazily and not in the resource broker constructor. This avoids 30-second delay.</li>
+    <li> gat.adaptor.path System property now again indicates a File.pathSeparator- separated path of directories (as it used to do in version 1.7).</li>
+    <li> Unicore adaptor is modified to make a unicore job advertisable, so that another javaGAT instance can later obtain the results.</li>
+</ul>
+
 <a name="SCALE2010"></a>
 <h4>SCALE Challenge 2010</h4>
 <p>

@@ -4,47 +4,112 @@ be implemented for different protocols by implementing multiple File adaptors.
 The table below shows the available JavaGAT objects together with the adaptors
 that implement this object.</p>
 
-<table border="1" cellspacing="0"
-    cellpadding="5"> <tbody><tr> <th>name</th> <th>adaptors</th> </tr> <tr>
-	    <td>
-		    FileInputStream
-		</td> <td> CopyingFileInputStreamAdaptor<br /> SftpTrileadFileInputStreamAdaptor<br />
-		GridFTPFileInputStreamAdaptor<br /> LocalFileInputStreamAdaptor<br />
-		FTPFileInputStreamAdaptor<br /> HTTPFileInputStreamAdaptor<br />
-		HTTPSFileInputStreamAdaptor<br /> </td> </tr> <tr> <td>
-LogicalFile </td>
-	    <td> GenericLogicalFileAdaptor<br /> </td> </tr> <tr> <td>
-File </td>
-	    <td> SftpTrileadFileAdaptor<br /> SshTrileadFileAdaptor<br />
-		CommandlineSshFileAdaptor<br />
-		GliteGuidFileAdaptor<br />
-		GliteSrmFileAdaptor<br />
-		GliteLfnFileAdaptor<br />
-		GridFTPFileAdaptor<br /> LocalFileAdaptor<br /> FTPFileAdaptor<br />
-		GT4GridFTPFileAdaptor<br /> RFTGT4FileAdaptor<br />
-		SrcToLocalToDestCopyFileAdaptor<br /> StreamingFileAdaptor<br /> </td>
-		</tr> <tr> <td>
-		ResourceBroker
-		</td> <td> SshTrileadResourceBrokerAdaptor<br />
-		WSGT4newResourceBrokerAdaptor<br /> GlobusResourceBrokerAdaptor<br />
-		LocalResourceBrokerAdaptor<br /> SgeResourceBrokerAdaptor<br />
-		CommandlineSshResourceBrokerAdaptor<br />
-		UnicoreResourceBrokerAdaptor<br />
-		GliteResourceBrokerAdaptor<br />
-		GridSAMResourceBrokerAdaptor<br /> GliteResourceBrokerAdaptor<br />
-		LocalQResourceBrokerAdaptor<br /> ZorillaResourceBrokerAdaptor<br />
-		    </td> </tr> <tr> <td><a
-		    AdvertService
-		    </td> <td> GenericAdvertServiceAdaptor<br /> </td> </tr> <tr> <td>
-		    Monitorable
-		    </td> <td> MercuryMonitorableAdaptor<br /> </td> </tr> <tr> <td>
-Endpoint </td>
-	    <td> SocketEndpointAdaptor<br /> </td> </tr> <tr> <td>
-		    FileOutputStream
-		</td> <td> SftpTrileadFileOutputStreamAdaptor<br />
-		GridFTPFileOutputStreamAdaptor<br /> LocalFileOutputStreamAdaptor<br />
-		FTPFileOutputStreamAdaptor<br /> HTTPFileOutputStreamAdaptor<br />
-		HTTPSFileOutputStreamAdaptor<br /> </td> </tr> <tr> <td
-RandomAccessFile
-	</td> <td> LocalRandomAccessFileAdaptor<br /> </td> </tr>
-</tbody></table>
+<table border="1" cellspacing="0" cellpadding="5">
+    <tbody>
+	<tr> <th>name</th> <th>adaptors</th> </tr>
+	<tr>
+<td>FileInputStream</a>
+</td>
+<td>
+    LocalFileInputStreamAdaptor<br />
+    GridFTPFileInputStreamAdaptor<br />
+    SftpTrileadFileInputStreamAdaptor<br />
+    FTPFileInputStreamAdaptor<br />
+    CopyingFileInputStreamAdaptor<br />
+    HTTPFileInputStreamAdaptor<br />
+    HTTPSFileInputStreamAdaptor<br />
+    SshTrileadFileInputStreamAdaptor<br />
+</td>
+</tr>
+<tr>
+    <td>LogicalFile</a>
+    </td>
+    <td>
+	GenericLogicalFileAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>File</a>
+    </td>
+    <td>
+	LocalFileAdaptor<br />
+	GridFTPFileAdaptor<br />
+	SftpTrileadFileAdaptor<br />
+	CommandlineSshFileAdaptor<br />
+	SshTrileadFileAdaptor<br />
+	FTPFileAdaptor<br />
+	RFTGT42FileAdaptor<br />
+	GT42GridFTPFileAdaptor<br />
+	GliteGuidFileAdaptor<br />
+	GliteSrmFileAdaptor<br />
+	GliteLfnFileAdaptor<br />
+	GT4GridFTPFileAdaptor<br />
+	RFTGT4FileAdaptor<br />
+	SrcToLocalToDestCopyFileAdaptor<br />
+	StreamingFileAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>ResourceBroker</a>
+    </td>
+    <td>
+	LocalResourceBrokerAdaptor<br />
+	GlobusResourceBrokerAdaptor<br />
+	WSGT4newResourceBrokerAdaptor<br />
+	SshTrileadResourceBrokerAdaptor<br />
+	CommandlineSshResourceBrokerAdaptor<br />
+	GT42ResourceBrokerAdaptor<br />
+	GliteResourceBrokerAdaptor<br />
+	GridSAMResourceBrokerAdaptor<br />
+	KoalaResourceBrokerAdaptor<br />
+	LocalQResourceBrokerAdaptor<br />
+	SgeResourceBrokerAdaptor<br />
+	UnicoreResourceBrokerAdaptor<br />
+	ZorillaResourceBrokerAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>Monitorable</a>
+    </td>
+    <td>
+	MercuryMonitorableAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>AdvertService</a>
+    </td>
+    <td>
+	GenericAdvertServiceAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>Endpoint</a>
+    </td>
+    <td>
+	SocketEndpointAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>FileOutputStream</a>
+    </td>
+    <td>
+	LocalFileOutputStreamAdaptor<br />
+	GridFTPFileOutputStreamAdaptor<br />
+	SftpTrileadFileOutputStreamAdaptor<br />
+	FTPFileOutputStreamAdaptor<br />
+	HTTPFileOutputStreamAdaptor<br />
+	HTTPSFileOutputStreamAdaptor<br />
+	SshTrileadFileOutputStreamAdaptor<br />
+    </td>
+</tr>
+<tr>
+    <td>RandomAccessFile</a>
+    </td>
+    <td>
+	GridFTPRandomAccessFileAdaptor<br />
+	LocalRandomAccessFileAdaptor<br />
+	SftpTrileadRandomAccessFileAdaptor<br />
+    </td>
+</tr>
+</tbody>
+</table>

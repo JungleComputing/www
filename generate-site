@@ -1,4 +1,5 @@
 #!/bin/bash
+export TMPDIR=.
 
 echo Generating html with ibis-website-generator...
 echo

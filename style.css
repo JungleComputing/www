@@ -1,10 +1,5 @@
 body {
-/*   background-color: #0055A5 ; VU-blue */
-/*    background-color: #666666 ; gray */
-/*    background-color: #38610B; light green */
-/*    background-color: #243B0B;  dark green */
-/*    background-color: #4B8A08; */
-    background-color: #38610B;
+    background-color: #0055A5 ; 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #000000;
@@ -12,8 +7,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-/*    color: #003B73; */
-    color: #1B2A0A;
+    color: #003B73;
 }
 
 #content_cell {
@@ -21,14 +15,17 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-/*    color: #1966AE;*/
-    color: #38610B;
+    color: #1966AE;
     text-decoration: underline;
 }
 
 a:hover {
     color: #CC0000;
     text-decoration: underline;
+}
+
+dt {
+    font-weight: bold;
 }
 
 img { border: none }
@@ -59,19 +56,17 @@ img.banner {
 /* MAIN TABLE */
 
 table.main {
-    width: 830px ;
+    width: 775px ;
     background-color: #FFFFFF ; 
     /*    border: thin dotted rgb(250,0,255) ; */
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    border-collapse: separate;
 
     padding-top:10px;
     padding-bottom:10px;
     padding-left:10px;
     padding-right:10px;
-    border: none;
 }
 
 td.main {
@@ -81,40 +76,34 @@ td.main {
     padding-left:3px;
     padding-right:3px;
     vertical-align: top;
-    border: none;
 }
 
 /* TOP MENU */
 
 div.topmenu {
-/*    background-color: #6699C9; */
-/*    background-color: #999999; */
-/*    background-color: #38610B; */
-    background-color: #38610B;
+/*    background-color: #1966AE;*/
+    background-color: #6699C9;
     color: #003B73;
     width: 100%;
 }
 
 table.topmenu {
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 0;
     border-collapse: collapse;
-/*    width: 700px; */
-    width: 100%;
-    border: none;
+    width: 800px;
 }
 
 td.topmenu {
     padding: 2px 2px 2px 2px;
-    border: none;
 }
 
 a.topmenu {
     text-align: center;
-    width: 110px;
+    width: 100px;
     height: 18px;
     font-weight: bold;
     font-size: 13px;
@@ -124,15 +113,13 @@ a.topmenu {
 }
 
 a.topmenu:hover {
-/*     background-color: #E5EEF6;*/
-     background-color: #E0F8E0;
+     background-color: #E5EEF6;
      color: #CC0000;
      text-decoration: underline;
 }
 
 a.topmenu_active {
-/*     background-color: #E5EEF6;*/
-     background-color: #E0F8E0;
+     background-color: #E5EEF6;
      color: #CC0000;
 }
 
@@ -142,8 +129,6 @@ table.news {
     width: 200px;
     vertical-align: top;
     border-collapse: collapse;
-    border-left: none;
-    border-right: none;
 }
 
 th.news {
@@ -152,25 +137,18 @@ th.news {
     padding:  0 0 0 10px  ;
     margin:  0 0 0 0px  ;
     height: 23px;
-    color: #000000;
-  /*  background-color: #E5EEF6; */
-    background-color: #CCCCCC;
-    border-left: none;
-    border-right: none;
+    color: #003B73;
+    background-color: #E5EEF6;
 }
 
 
 td.news {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-/*    border-bottom: 1px solid #99BBDB;*/
-    border-bottom: 1px solid #38610B;
+    border-bottom: 1px solid #99BBDB;
     padding: 7px 10px 7px 10px;
 }
 
 a.news {
-/*    color:#003B73;*/
+    color:#003B73;
     text-decoration: none;
 }
 
@@ -186,22 +164,16 @@ table.menu {
     vertical-align: top;
     border-collapse: collapse; 
     margin-top: 1px;
-    border-left: none;
-    border-right: none;
 }
 
 td.menu {
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #38610B;
-    border-top: 1px solid #38610B;
-/*    border-top: 1px solid #99BBDB;*/
-/*    border-bottom: 1px solid #99BBDB;*/
+    border-top: 1px solid #99BBDB;
+    border-bottom: 1px solid #99BBDB;
     padding: 0px 0px 0px 0px;
 }
 
 a.menu {
-/*    color:#003B73;*/
+    color:#003B73;
     text-decoration: none;
     height: 30px;
     width: 200px;
@@ -227,33 +199,13 @@ a.level2 {
 }
 
 a.menu_active {
-     background-color: #E0F8E0;
-     color: #CC0000;
+    background-color: #E5EEF6;
+    color: #CC0000;
 }
 
 a.menu:hover {
     color: #CC0000;
     text-decoration: underline;
-/*    background-color: #E5EEF6;*/
-    background-color: #E0F8E0;
-}
-
-
-table {
-    border-collapse:collapse; 
-    border: none;
-}
-
-th,td {
-    padding: 5px 5px 5px 5px;
-    border: 1px solid black; 
-}
-
-td.break {
-    color: #666666;
-}
-
-td.empty {
-    border: none;
+    background-color: #E5EEF6;
 }
 

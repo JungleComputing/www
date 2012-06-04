@@ -1,12 +1,42 @@
 <!-- Fancy newspaper banner :) -->
 <img class=banner src="images/banners/newspaper-banner.png" alt="Banner">
 
+<h2>2012</h2>
+
+<a name="javagat2.1.2"></a> 
+<h4>JavaGAT 2.1.2 released</h4> 
+<p>June 2012: JavaGAT 2.1.2 is now available from its
+<a href="http://gforge.cs.vu.nl/gf/project/javagat/frs/?action=FrsReleaseView&release_id=157">downloads page</a>.
+It contains a.o. the following changes with respect to version 2.1.1:</p>
+<ul>
+    <li> getMessage() of GatInvocationException was far too verbose; it included stacktraces. This has been fixed.</li>
+    <li> added various methods to commandlinessh file adaptor (a.o. canRead and canWrite).</li>
+    <li> fixed various issues with the commandlinessh and sshpbs and sshsge adaptors:
+    Ssh commands were constructed at various places, and mostly wrongly (adding ports when not needed, adding user names when not needed). This made ssh config files that mention user names or port numbers not work. Now, commandlinessh, as well as sshpbs and sshsge work, even over an ssh tunnel.</li>
+    <li> fixed a leak in the wsgt4new and GT42 adaptors (leaked both threads and sockets). Apparently, GramJob.setDelegationEnabled(false) must be called before destroying a job.</li>
+    <li> moved the bin directory to scripts; easier for Eclipse users.</li>
+    <li> added various package-info.java files, replacing package.html.</li>
+    <li> added resource count and process count to JobDescription.toString().</li>
+    <li> added an SSH-PBS and an SSH-SGE resource broker adaptor.
+    The PBS version was written by Alexander Beck-Ratzka and was later extended by Ceriel Jacobs, and used to derive a (similar) sshpsge adaptor.</li>
+    <li> the javadoc entry in api/build.xml referred to a no longer existing URL.</li>
+    <li> added an "end()" method to the SftpTrilead file adaptor to close all connections.</li>
+    <li> the Streaming file adaptor did not always close files correctly.</li>
+    <li> the Local resourcebroker adaptor now also recognizes the scheme "fork".</li>
+    <li> the Local resourcebroker adaptor sometimes caused deadlocks in termination.</li>
+    <li> fixed a couple of issues with the GridFTP File adaptor connection cache.</li>
+    <li> the SshTrilead file adaptor was sometimes leaking connections, which resulted in too many sshd processes on the server side.</li>
+    <li> there were various instances where the SshTrilead file adaptor used an ssh connection, even for local operations.</li>
+    <li> for "copy to local" operations, the SshTrilead file adaptor did not close the destination file correctly.</li>
+</ul>
+
 <a name="IPL2.3"></a>
 <h4>IPL 2.3 released</h4>
 <p>May 2012: Ibis Portability Layer (IPL) version 2.3 is now available!
 For more information and downloads, see the <a href="ipl.html">IPL subproject page</a>.
 </p>
 
+<h2>2011</h2>
 
 <a name="javagat2.1.1"></a> 
 <h4>JavaGAT 2.1.1 released</h4> 
@@ -32,6 +62,8 @@ It contains a.o. the following changes with respect to version 2.1.0:</p>
 <li> FileCpi: copyDirectory path manipulation was wrong for Windows. </li>
 <li> JobCpi: improved shutdown hook to make a second invocation wait until the first one is done. This prevents GAT.end to call end() on the adaptors before the job shutdown is done. </li>
 </ul>
+
+<h2>2010</h2>
 
 <a name="javagat2.1.0"></a> 
 <h4>JavaGAT 2.1.0 released</h4> 
@@ -65,6 +97,8 @@ It contains a.o. the following changes with respect to version 2.0.5:</p>
 May 2010: WebPie won 1st place at the <a href="http://www.manjrasoft.com/ccgrid2010/scale2010.html">SCALE Challenge 2010</a>!
 See <a href="http://www.cs.vu.nl/~frankh/spool/SCALE2010-challenge-submission.pdf">the submission paper</a>. 
 </p>
+
+<h2>2009</h2>
 
 <a name="Satin2.2"></a> 
 <h4>Ibis Satin 2.2 released</h4>
@@ -198,6 +232,8 @@ changes with respect to version 2.0.3:</p>
     <li>LocalFileAdaptor: fixed bug 221 (getParentFile).</li>
     <li>Zorilla adaptor: various fixes.</li>
 </ul>
+
+<h2>2008</h2>
 
 <a name="MaRVIN"></a>
 <h4>MaRVIN Team wins 3rd prize at Billion Tripple track of Semantic Web Challenge 2008</h4>
